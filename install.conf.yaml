@@ -11,3 +11,4 @@
     ~/.tmux.conf: tmux.conf
     ~/.config/i3status/config: i3status
     ~/.config/picom/picom.conf: picom.conf
+    ~/.config/alacritty/alacritty.yml: alacritty.yml
