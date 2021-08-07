@@ -93,6 +93,8 @@ export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS="@im=fcitx"
 
+export QT_QPA_PLATFORMTHEME=qt5ct
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
