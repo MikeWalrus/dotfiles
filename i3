@@ -11,7 +11,7 @@
 
 set $mod Mod4
 
-default_border pixel 1 
+default_border pixel 1
 
 # colour scheme
 # class                 border  bground text    indicator child_border
@@ -50,6 +50,9 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+# Key binding to bring up pacmixer
+bindsym $mod+Shift+v exec "alacritty -e pacmixer"
 
 # Use brightnessctl to adjust brightness of the screen
 bindsym XF86MonBrightnessUp exec brightnessctl set 3000+
@@ -269,3 +272,5 @@ mode "restore" {
 bindsym $mod+n mode "restore"
 
 exec --no-startup-id picom -b --experimental-backend
+
+exec --no-startup-id "alacritty -e tmux new-session clash \; split-window \; select-layout even-horizontal"
