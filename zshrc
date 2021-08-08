@@ -87,11 +87,11 @@ export https_proxy=http://127.0.0.1:7890
 
 export TERM=xterm-256color
 
-export XIM_PROGRAM=fcitx
-export XIM=fcitx
-export GTK_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
-export XMODIFIERS="@im=fcitx"
+export XIM_PROGRAM=fcitx5
+export XIM=fcitx5
+export GTK_IM_MODULE=fcitx5
+export QT_IM_MODULE=fcitx5
+export XMODIFIERS="@im=fcitx5"
 
 export QT_QPA_PLATFORMTHEME=qt5ct
 

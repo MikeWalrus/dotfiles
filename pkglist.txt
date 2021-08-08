@@ -3,6 +3,8 @@ alacritty
 alsa-plugins
 alsa-utils
 anki
+arc-gtk-theme
+arc-icon-theme
 audacity
 autoconf
 automake
@@ -13,6 +15,7 @@ bison
 bluez
 bluez-utils
 bpytop
+breeze
 brightnessctl
 cabal-install
 chromium
@@ -26,9 +29,12 @@ dmenu
 efibootmgr
 emacs
 fakeroot
-fcitx-configtool
-fcitx-googlepinyin
-fcitx-qt5
+fcitx5
+fcitx5-chinese-addons
+fcitx5-configtool
+fcitx5-gtk
+fcitx5-nord
+fcitx5-qt
 feh
 flameshot
 flex
@@ -63,6 +69,7 @@ libreoffice-fresh
 libva-utils
 linux
 linux-firmware
+lxappearance-gtk3
 m4
 make
 man-pages
@@ -108,6 +115,7 @@ python-pandas
 python-pip
 python2
 qemu
+qt5ct
 read-edid
 realtime-privileges
 rofi

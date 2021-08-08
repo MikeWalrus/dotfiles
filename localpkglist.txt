@@ -5,6 +5,7 @@ clash-premium-bin
 clashup
 colorpicker
 compton-conf
+deadd-notification-center-bin
 dotbot
 edrawmax
 epson-inkjet-printer-escpr
@@ -23,6 +24,7 @@ masterpdfeditor
 meh-git
 microsoft-edge-dev-bin
 minecraft-launcher
+notify-send-py
 onedrive-abraunegg
 pacmixer
 perl-log-dispatch
@@ -31,7 +33,7 @@ qt4-bin
 rars
 scrcpy
 tmux-resurrect
-ttf-apple-emoji
+ttf-twemoji
 vim-airline-palenight-git
 vim-cpp-enhanced-highlight-git
 vim-palenight-git
