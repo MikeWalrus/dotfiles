@@ -17,6 +17,7 @@ bluez-utils
 bpytop
 breeze
 brightnessctl
+bsd-games
 cabal-install
 chromium
 cloc
@@ -24,6 +25,7 @@ code
 coqide
 cups
 darktable
+dino
 discord
 dmenu
 efibootmgr
@@ -36,8 +38,10 @@ fcitx5-gtk
 fcitx5-nord
 fcitx5-qt
 feh
+firefox
 flameshot
 flex
+gajim
 gcc
 gdb
 ghc
@@ -61,6 +65,7 @@ intel-gpu-tools
 intel-media-driver
 iverilog
 jack2
+jami-gnome
 kcolorpicker
 kitty
 lib32-gcc-libs
@@ -75,6 +80,7 @@ make
 man-pages
 mariadb
 mesa-demos
+mlocate
 mplayer
 mpv
 namcap
@@ -110,9 +116,11 @@ pipewire-pulse
 pkgconf
 pulsemixer
 pycharm-community-edition
+python-axolotl
 python-numpy
 python-pandas
 python-pip
+python-qrcode
 python2
 qemu
 qt5ct
@@ -141,6 +149,7 @@ vbam-wx
 vim-airline
 vim-ale
 vim-gitgutter
+vim-spell-en
 vlc
 wget
 wmctrl
@@ -203,3 +212,6 @@ zathura
 zathura-pdf-mupdf
 zip
 zsh
+zsh-autosuggestions
+zsh-history-substring-search
+zsh-syntax-highlighting

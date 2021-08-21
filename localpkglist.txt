@@ -1,6 +1,8 @@
 ao
 autojump
+bitwarden-bin
 bouml
+clash-dashboard-git
 clash-premium-bin
 clashup
 cloudflared-bin
@@ -14,20 +16,20 @@ foxitreader
 i3lock-color
 kbi
 krop
-libsigc++3
+lf-bin
 lightly-git
 linuxqq
 logisim
 logisim-evolution-bin
 masterpdfeditor
 meh-git
-microsoft-edge-dev-bin
 notify-send-py
 onedrive-abraunegg
 pacmixer
 paru-bin
 perl-log-dispatch
 picom-tryone-git
+psi-plus
 qt4-bin
 rars
 scrcpy
@@ -40,3 +42,4 @@ vim-vimwiki
 vim-youcompleteme-git
 yay-bin
 zsh-vi-mode
+zsh-z-git

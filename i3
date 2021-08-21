@@ -51,9 +51,6 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
-# Key binding to bring up pacmixer
-bindsym $mod+Shift+v exec "alacritty -e pacmixer"
-
 # Use brightnessctl to adjust brightness of the screen
 bindsym XF86MonBrightnessUp exec brightnessctl set 3000+
 bindsym XF86MonBrightnessDown exec brightnessctl set 3000-
@@ -204,7 +201,7 @@ bar {
   i3bar_command i3bar --transparency
   status_command i3status
   colors {
-    background #00001135
+    background #00001150
     statusline #FFFFFFFF
     separator  #00000000
 
@@ -220,3 +217,9 @@ bar {
 exec --no-startup-id picom -b --experimental-backend
 
 exec --no-startup-id "alacritty -e tmux new-session clash \; split-window \; select-layout even-horizontal"
+
+# Key binding to bring up pacmixer
+bindsym $mod+Shift+v exec "alacritty -e pacmixer"
+
+# Key binding for the browser
+bindsym $mod+b exec "firefox"
