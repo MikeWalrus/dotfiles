@@ -38,7 +38,6 @@ fcitx5-gtk
 fcitx5-nord
 fcitx5-qt
 feh
-firefox
 flameshot
 flex
 gajim
@@ -48,6 +47,7 @@ ghc
 gimp
 git
 github-cli
+gnome-keyring
 goldendict
 grub
 gtk4-demos
@@ -70,6 +70,7 @@ kcolorpicker
 kitty
 lib32-gcc-libs
 libffado
+libgnome-keyring
 libreoffice-fresh
 libva-utils
 linux
@@ -89,6 +90,7 @@ neofetch
 nethack
 networkmanager
 newsflash
+nextcloud-client
 ntfs-3g
 nvidia
 nvidia-prime
@@ -128,6 +130,7 @@ read-edid
 realtime-privileges
 rofi
 rustup
+seahorse
 sof-firmware
 stack
 stk

@@ -2,6 +2,7 @@ ao
 autojump
 bitwarden-bin
 bouml
+brave-bin
 clash-dashboard-git
 clash-premium-bin
 clashup
@@ -33,6 +34,7 @@ psi-plus
 qt4-bin
 rars
 scrcpy
+termius
 tmux-resurrect
 ttf-twemoji
 vim-airline-palenight-git

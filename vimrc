@@ -12,18 +12,7 @@ set updatetime=100
 set nocompatible
 filetype plugin on
 
-let g:vimwiki_list = [{'path': '~/OneDrive/Sync/vimwiki',
-\ 'path_html': '~/OneDrive/Sync/vimwiki_html',
-\ 'auto_toc': 1,
-\ 'auto_diary_index': 1,
-\ 'auto_generate_links': 1,
-\ 'auto_generate_tags': 1,
-\ 'template_path': '~/.vimwiki/',
-\ 'template_ext': '.html'}]
-
-let g:vimwiki_auto_header = 1
-let g:vimwiki_toc_header_level = 2
-
+set foldmethod=syntax
 
 set sw=4
 set ts=4
@@ -35,6 +24,22 @@ autocmd FileType make setlocal noexpandtab
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 " https://stackoverflow.com/a/7078429
 cmap w!! w !sudo tee > /dev/null %
+
+
+""
+" Themes and plugins 
+""
+let g:vimwiki_list = [{'path': '~/nextcloud/vimwiki',
+\ 'path_html': '~/nextcloud/vimwiki_html',
+\ 'auto_toc': 1,
+\ 'auto_diary_index': 1,
+\ 'auto_generate_links': 1,
+\ 'auto_generate_tags': 1,
+\ 'template_path': '~/.vimwiki/',
+\ 'template_ext': '.html'}]
+
+let g:vimwiki_auto_header = 1
+let g:vimwiki_toc_header_level = 2
 
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_autoclose_preview_window_after_completion = 1

@@ -222,4 +222,4 @@ exec --no-startup-id "alacritty -e tmux new-session clash \; split-window \; sel
 bindsym $mod+Shift+v exec "alacritty -e pacmixer"
 
 # Key binding for the browser
-bindsym $mod+b exec "firefox"
+bindsym $mod+b exec "brave --force-device-scale-factor=1.4"

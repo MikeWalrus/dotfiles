@@ -30,6 +30,8 @@ export all_proxy=http://127.0.0.1:7890
 export ALL_PROXY=http://127.0.0.1:7890
 export http_proxy=http://127.0.0.1:7890
 export https_proxy=http://127.0.0.1:7890
+export HTTP_PROXY=http://127.0.0.1:7890
+export HTTPS_PROXY=http://127.0.0.1:7890
 
 export TERM=xterm-256color
 
@@ -42,6 +44,8 @@ export XMODIFIERS="@im=fcitx5"
 export QT_QPA_PLATFORMTHEME=qt5ct
 
 export MOZ_USE_XINPUT2="1"
+
+export EDITOR=vim
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -67,6 +71,7 @@ export MOZ_USE_XINPUT2="1"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias sudo="sudo -E"
+alias ls="ls --color=auto"
 
 alias auth='chromium --no-proxy-server'
 alias zathura="zathura --fork"
