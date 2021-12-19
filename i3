@@ -55,7 +55,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 bindsym XF86MonBrightnessUp exec brightnessctl set 3000+
 bindsym XF86MonBrightnessDown exec brightnessctl set 3000-
 
-bindsym $mod+u exec "systemctl suspend"
+bindsym $mod+u exec "i3lock & systemctl suspend"
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -217,6 +217,8 @@ bar {
 exec --no-startup-id picom -b --experimental-backend
 
 exec --no-startup-id "alacritty -e tmux new-session clash \; split-window \; select-layout even-horizontal"
+
+exec --no-startup-id dunst
 
 # Key binding to bring up pacmixer
 bindsym $mod+Shift+v exec "alacritty -e pacmixer"

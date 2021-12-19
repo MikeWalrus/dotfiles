@@ -262,8 +262,8 @@ colors:
     text:       CellBackground
     cursor:     '#528bff' # syntax-cursor-color
   selection:
-    text:       CellForeground
-    background: '#3e4451' # syntax-selection-color
+    text:       CellBackground
+    background: CellForeground # syntax-selection-color
   normal:
     black:      '#5c6370' # mono-3
     red:        '#e06c75' # red 1

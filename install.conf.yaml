@@ -16,3 +16,7 @@
       create: true
       path: image-info.sh
     ~/.config/fcitx5/conf/classicui.conf: fcitx5_classicui.conf
+    ~/.config/dunst/dunstrc: dunstrc
+    ~/.doom.d/config.el: doom/config.el
+    ~/.doom.d/init.el: doom/init.el
+    ~/.doom.d/packages.el: doom/packages.el

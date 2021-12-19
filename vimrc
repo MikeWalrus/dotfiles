@@ -10,20 +10,31 @@ set incsearch
 set updatetime=100
 
 set nocompatible
-filetype plugin on
 
 set foldmethod=syntax
 
 set sw=4
 set ts=4
 
-:set backspace=indent,eol,start
+set backspace=indent,eol,start
 
 autocmd FileType make setlocal noexpandtab
+autocmd FileType c setlocal noexpandtab tabstop=8 shiftwidth=8
+autocmd BufRead,BufNewFile *.h,*.c set filetype=c
 
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 " https://stackoverflow.com/a/7078429
 cmap w!! w !sudo tee > /dev/null %
+
+filetype plugin indent on
+set grepprg=grep\ -nH\ $*
+let g:tex_flavor = "latex"
+"Add XeLaTex rules
+let g:Tex_CompileRule_xe = 'xelatex $*'
+let g:Tex_ViewRule_xe = 'xdg-open'
+
+"Set default target to XeLatex
+let g:Tex_DefaultTargetFormat = 'xe'
 
 
 ""

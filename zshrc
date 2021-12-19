@@ -13,6 +13,8 @@ SAVEHIST=10000
 autoload -U colors && colors
 PS1="%B%{$fg[red]%}%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%(?..[%?] )%{$fg[red]%}%{$reset_color%}$%b "
 
+source /usr/share/zsh/plugins/zsh-z/zsh-z.plugin.zsh
+
 autoload -U compinit
 zstyle ':completion:*' menu select
 zmodload zsh/complist
@@ -32,6 +34,29 @@ export http_proxy=http://127.0.0.1:7890
 export https_proxy=http://127.0.0.1:7890
 export HTTP_PROXY=http://127.0.0.1:7890
 export HTTPS_PROXY=http://127.0.0.1:7890
+
+if [ "$TERM" = "linux" ]; then
+    /bin/echo -e "
+    \e]P0292d3e
+    \e]P1f07178
+    \e]P2c3e88d
+    \e]P3ffcb6b
+    \e]P482aaff
+    \e]P5c792ea
+    \e]P689ddff
+    \e]P7c5cdcb
+    \e]P8676e95
+    \e]P9f07178
+    \e]PAc3e88d
+    \e]PBffcb6b
+    \e]PC82aaff
+    \e]PDc792ea
+    \e]PE89ddff
+    \e]PFffffff
+    "
+    # get rid of artifacts
+    clear
+fi
 
 export TERM=xterm-256color
 
@@ -83,28 +108,55 @@ alias vimwiki="vim -c ':VimwikiIndex'"
 
 # My own functions
 dorm () {
-	killall picom
-	xrandr --output DP3 --mode 2560x1440 --left-of eDP1 --rotate left || xrandr --output DP2 --mode 2560x1440 --left-of eDP1 --rotate left
-	bluetoothctl power on
-#	nmcli radio wifi off
-	auth www.bing.com &
-	~/.fehbg 
+    killall picom
+    xrandr --output DP3 --mode 2560x1440 --left-of eDP1 --rotate left || xrandr --output DP2 --mode 2560x1440 --left-of eDP1 --rotate left
+    bluetoothctl power on
+    #   nmcli radio wifi off
+    auth www.bing.com &
+    ~/.fehbg
 }
 
 dorm () {
-	#killall picom
-	xrandr --output DP3 --mode 2560x1440 --above eDP1 || xrandr --output DP2 --mode 2560x1440 --above eDP1
-	bluetoothctl power on
-	nmcli radio wifi off
-	auth www.bing.com &
-	~/.fehbg 
+    #killall picom
+    xrandr --output DP3 --mode 2560x1440 --above eDP1 || xrandr --output DP2 --mode 2560x1440 --above eDP1
+    bluetoothctl power on
+    nmcli radio wifi off
+    auth www.bing.com &
+    ~/.fehbg
 }
 
 home () {
-	#killall picom
-	xrandr --output DP3 --mode 2560x1440 --above eDP1 || xrandr --output DP2 --mode 2560x1440 --above eDP1
-	bluetoothctl power on
-	~/.fehbg 
+    #killall picom
+    xrandr --output DP3 --mode 2560x1440 --above eDP1 || xrandr --output DP2 --mode 2560x1440 --above eDP1
+    bluetoothctl power on
+    ~/.fehbg
+}
+
+countdown(){
+    date1=$((`date +%s` + $1));
+    while [ "$date1" -ge `date +%s` ]; do
+        ## Is this more than 24h away?
+        days=$(($(($(( $date1 - $(date +%s))) * 1 ))/86400))
+        echo -ne "\r$days day(s) and $(date -u --date @$(($date1 - `date +%s`)) +%H:%M:%S)";
+        sleep 0.1
+    done
+}
+stopwatch(){
+    date1=`date +%s`;
+    while true; do
+        days=$(( $(($(date +%s) - date1)) / 86400 ))
+        echo -ne "\r$days day(s) and $(date -u --date @$((`date +%s` - $date1)) +%H:%M:%S)";
+        sleep 0.1
+    done
+}
+
+screencast(){
+    ffmpeg \
+	-f x11grab \
+	-s "$(xdpyinfo | awk '/dimensions/ {print $2;}')" \
+	-i "$DISPLAY" \
+ 	-c:v libx264 -qp 0 -r 30 \
+	"$HOME/video-$(date '+%y%m%d-%H%M-%S').mkv"
 }
 
 
@@ -114,7 +166,6 @@ ZVM_CURSOR_STYLE_ENABLED=false
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-source /usr/share/zsh/plugins/zsh-z/zsh-z.plugin.zsh
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
@@ -124,3 +175,5 @@ zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 bindkey "^[[A" up-line-or-beginning-search # Up
 bindkey "^[[B" down-line-or-beginning-search # Down
+bindkey -a '^[[3~' vi-delete-char
+bindkey '^[[3~' delete-char
