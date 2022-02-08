@@ -22,6 +22,8 @@ autocmd FileType make setlocal noexpandtab
 autocmd FileType c setlocal noexpandtab tabstop=8 shiftwidth=8
 autocmd BufRead,BufNewFile *.h,*.c set filetype=c
 
+set wildchar=<Tab> wildmenu wildmode=full
+
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 " https://stackoverflow.com/a/7078429
 cmap w!! w !sudo tee > /dev/null %
@@ -36,6 +38,12 @@ let g:Tex_ViewRule_xe = 'xdg-open'
 "Set default target to XeLatex
 let g:Tex_DefaultTargetFormat = 'xe'
 
+""
+" Verilog
+""
+let g:ale_linters = {'verilog' : ['verilator'],}
+let g:formatdef_istyle = '"iStyle --style=kr"'
+let g:formatters_verilog = ['istyle']
 
 ""
 " Themes and plugins 

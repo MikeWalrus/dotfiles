@@ -20,6 +20,7 @@ zstyle ':completion:*' menu select
 zmodload zsh/complist
 compinit
 
+
 # Use vim keys in tab complete menu:
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
@@ -111,7 +112,6 @@ dorm () {
     killall picom
     xrandr --output DP3 --mode 2560x1440 --left-of eDP1 --rotate left || xrandr --output DP2 --mode 2560x1440 --left-of eDP1 --rotate left
     bluetoothctl power on
-    #   nmcli radio wifi off
     auth www.bing.com &
     ~/.fehbg
 }
@@ -129,6 +129,12 @@ home () {
     #killall picom
     xrandr --output DP3 --mode 2560x1440 --above eDP1 || xrandr --output DP2 --mode 2560x1440 --above eDP1
     bluetoothctl power on
+    ~/.fehbg
+}
+
+only_ex () {
+    external_monitor="$(xrandr | awk '$2 == "connected"{print $1}' | grep -v "eDP")"
+    xrandr --output eDP1 --off --output ${external_monitor} --auto
     ~/.fehbg
 }
 
@@ -160,14 +166,16 @@ screencast(){
 }
 
 
-source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.zsh
+# source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.zsh
 # Disable the cursor style feature
-ZVM_CURSOR_STYLE_ENABLED=false
+# ZVM_CURSOR_STYLE_ENABLED=false
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+set -o emacs
 
 autoload -U up-line-or-beginning-search
 autoload -U down-line-or-beginning-search
@@ -175,5 +183,6 @@ zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 bindkey "^[[A" up-line-or-beginning-search # Up
 bindkey "^[[B" down-line-or-beginning-search # Down
-bindkey -a '^[[3~' vi-delete-char
+#bindkey -a '^[[3~' vi-delete-char
 bindkey '^[[3~' delete-char
+

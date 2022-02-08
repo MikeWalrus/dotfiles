@@ -3,12 +3,11 @@
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
 
-(setq doom-font (font-spec :family "Jetbrains Mono" :size 22)
-      doom-variable-pitch-font (font-spec :family "DejaVuSans" :size 22))
+(setq doom-font (font-spec :family "Jetbrains Mono Medium" :size 22)
+      doom-variable-pitch-font (font-spec :family "DejaVu Serif" :size 22))
 
 (setq fcitx-remote-command "fcitx5-remote")
 
-(setq doom-theme 'doom-palenight)
 
 (setq ispell-dictionary "en")
 
@@ -39,12 +38,15 @@
 (setq TeX-save-query nil
       TeX-show-compilation t
       TeX-command-extra-options "-shell-escape")
-(after! latex
-  (add-to-list 'TeX-command-list '("XeLaTeX" "%`xelatex%(mode)%' %t" TeX-run-TeX nil t)))
 
+(setq TeX-engine "xelatex")
 
 (setq-default evil-escape-key-sequence "jj")
+(setq-default evil-escape-delay 0.2)
 
+;; company-mode
+(company-tng-configure-default)
+(setq company-idle-delay 0)
 
 (custom-set-faces
   '(org-level-1 ((t (:inherit outline-1 :height 1.4))))
@@ -57,6 +59,27 @@
 (setq lsp-rust-server 'rust-analyzer)
 
 (setq-default anki-editor-use-math-jax t)
+
+(setq langtool-java-classpath
+      "/usr/share/languagetool:/usr/share/java/languagetool/*")
+
+(add-to-list 'auto-mode-alist
+                 '("\\.v\\'" . verilog-mode))
+
+;; Verilog mode disable auto formatting
+(defun my-verilog-hook ()
+    (setq indent-tabs-mode nil)
+    (setq tab-width 4)
+    (setq verilog-indent-level 4)
+    (setq verilog-indent-level-behavioral 4)
+    (setq verilog-indent-level-declaration 4)
+    (setq verilog-indent-level-directive 4)
+    (setq verilog-indent-level-module 4)
+    (define-key verilog-mode-map (kbd ";") 'self-insert-command)
+    (define-key verilog-mode-map (kbd ":") 'self-insert-command)
+    (define-key verilog-mode-map (kbd "RET") 'evil-ret-and-indent)
+    (define-key verilog-mode-map (kbd "TAB") 'tab-to-tab-stop))
+(add-hook 'verilog-mode-hook 'my-verilog-hook)
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
@@ -79,7 +102,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-one)
+(setq doom-theme 'doom-palenight)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!

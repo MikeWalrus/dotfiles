@@ -300,17 +300,17 @@ separator_color = "#959DCB40"
 
 [base16_low]
     msg_urgency = low
-    background = "#44426740"
+    background = "#44426770"
     foreground = "#F0F0F0"
 
 [base16_normal]
     msg_urgency = normal
-    background = "#32374D40"
+    background = "#32374D70"
     foreground = "#F0F0F0"
 
 [base16_critical]
     msg_urgency = critical
-    background = "#F0717840"
+    background = "#F0717870"
     foreground = "#F0F0F0"
 
 # Every section that isn't one of the above is interpreted as a rules to

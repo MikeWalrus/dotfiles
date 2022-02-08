@@ -225,3 +225,14 @@ bindsym $mod+Shift+v exec "alacritty -e pacmixer"
 
 # Key binding for the browser
 bindsym $mod+b exec "brave --force-device-scale-factor=1.4"
+
+# Key bindings for dunst
+bindsym $mod+Shift+h exec dunstctl history-pop
+bindsym $mod+n exec dunstctl "close-all"
+
+# Key binding for taking a screenshot
+bindsym $mod+Shift+s --release exec import /home/mike/screen.jpg
+# ocr the screen
+bindsym $mod+Shift+o --release exec ~/scripts/ocr_screen.sh
+# find-cursor
+bindsym $mod+c --release exec find-cursor
