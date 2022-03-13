@@ -3,6 +3,8 @@
 export PATH=/usr/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/texlive/2021/bin/x86_64-linux:$PATH
+export PATH=/usr/bin/vendor_perl:$PATH
+export PATH="$HOME"/.local/bin:$PATH
 export MANPATH=/usr/local/texlive/2021/texmf-dist/doc/man:$MANPATH
 export INFOPATH=/usr/local/texlive/2021/texmf-dist/doc/info:$INFOPATH
 

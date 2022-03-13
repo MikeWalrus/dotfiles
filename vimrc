@@ -42,7 +42,7 @@ let g:Tex_DefaultTargetFormat = 'xe'
 " Verilog
 ""
 let g:ale_linters = {'verilog' : ['verilator'],}
-let g:formatdef_istyle = '"iStyle --style=kr"'
+let g:formatdef_istyle = '"iStyle"'
 let g:formatters_verilog = ['istyle']
 
 ""

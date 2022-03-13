@@ -13,7 +13,7 @@
 
 (after! org
   (setq org-directory "~/nextcloud/org/"
-        org-agenda-files '("~/nextcloud/org/agenda/")
+        org-agenda-files '("~/nextcloud/org/agenda/" "~/nextcloud/org/")
         org-default-notes-file (expand-file-name "notes.org" org-directory)
         org-ellipsis " ▼ "
         org-superstar-headline-bullets-list '("◉" "●" "○" "◆" "●" "○" "◆")
@@ -30,7 +30,17 @@
            "DONE(d)"
            "CANCELLED(c)"))
         ) ; Task has been cancelled
+  )
+(after! org
+  (add-to-list 'org-file-apps
+     '("\\.pdf\\'" . "zathura \"%s\""))
 )
+
+(after! ox-latex
+  (setq org-latex-listings 'minted)
+  )
+(require 'ox-latex)
+(add-to-list 'org-latex-packages-alist '("" "minted"))
 
 (setq +latex-viewers '(zathura))
 

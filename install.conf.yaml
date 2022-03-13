@@ -13,8 +13,6 @@
     ~/.config/i3status/config: i3status
     ~/.config/picom/picom.conf: picom.conf
     ~/.config/alacritty/alacritty.yml: alacritty.yml
-    ~/.config/sxiv/exec/image-info: 
-      create: true
-      path: image-info.sh
+    ~/.config/sxiv/exec: sxiv
     ~/.config/dunst/dunstrc: dunstrc
     ~/.doom.d: doom

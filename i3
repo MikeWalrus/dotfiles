@@ -126,7 +126,7 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1:Term"
+set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
 set $ws4 "4"
@@ -207,7 +207,7 @@ bar {
 
     focused_workspace  #A9B5FF70 #939EDE30 #FFFFFF80
     active_workspace   #33333300 #22222200 #FFFFFF
-    inactive_workspace #33333300 #22222200 #88888800
+    inactive_workspace #33333300 #22222200 #CCCCCC00
     urgent_workspace   #2F343A #F07178 #FFFFFF
     binding_mode       #2F343A #F07178 #FFFFFF
   }
@@ -219,6 +219,8 @@ exec --no-startup-id picom -b --experimental-backend
 exec --no-startup-id "alacritty -e tmux new-session clash \; split-window \; select-layout even-horizontal"
 
 exec --no-startup-id dunst
+
+exec --no-startup-id ~/.local/bin/i3wsr
 
 # Key binding to bring up pacmixer
 bindsym $mod+Shift+v exec "alacritty -e pacmixer"
@@ -236,3 +238,5 @@ bindsym $mod+Shift+s --release exec import /home/mike/screen.jpg
 bindsym $mod+Shift+o --release exec ~/scripts/ocr_screen.sh
 # find-cursor
 bindsym $mod+c --release exec find-cursor
+# emacsclient -nc
+bindsym $mod+x --release exec emacsclient -nc
