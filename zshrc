@@ -2,15 +2,13 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=/usr/bin:$PATH
 export PATH=/usr/local/bin:$PATH
-export PATH=/usr/local/texlive/2021/bin/x86_64-linux:$PATH
 export PATH=/usr/bin/vendor_perl:$PATH
 export PATH="$HOME"/.local/bin:$PATH
-export MANPATH=/usr/local/texlive/2021/texmf-dist/doc/man:$MANPATH
-export INFOPATH=/usr/local/texlive/2021/texmf-dist/doc/info:$INFOPATH
+export PATH="$HOME"/.ghcup/bin:$PATH
 
 HISTFILE=~/.zsh_history
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=1000000
+SAVEHIST=1000000
 
 autoload -U colors && colors
 PS1="%B%{$fg[red]%}%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%(?..[%?] )%{$fg[red]%}%{$reset_color%}$%b "
@@ -106,6 +104,7 @@ alias zathura="zathura --fork"
 alias za=zathura\ -c\ ~/.config/zathura/translusent
 alias syssus="systemctl suspend"
 alias vimwiki="vim -c ':VimwikiIndex'"
+alias lf=lfub
 #alias code="prime-run code"
 
 
@@ -167,6 +166,7 @@ screencast(){
 	"$HOME/video-$(date '+%y%m%d-%H%M-%S').mkv"
 }
 
+source /usr/share/lf/lfcd.sh
 
 # source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.zsh
 # Disable the cursor style feature

@@ -52,3 +52,4 @@
 (package! evil-tutor)
 (package! anki-editor)
 (package! langtool)
+(package! gnuplot)

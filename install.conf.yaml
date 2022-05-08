@@ -16,3 +16,4 @@
     ~/.config/sxiv/exec: sxiv
     ~/.config/dunst/dunstrc: dunstrc
     ~/.doom.d: doom
+    ~/.config/lf: lf
