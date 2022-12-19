@@ -21,21 +21,40 @@ set ts=4
 set backspace=indent,eol,start
 
 autocmd FileType make setlocal noexpandtab
+autocmd FileType kconfig setlocal noexpandtab
 autocmd FileType c setlocal noexpandtab tabstop=8 shiftwidth=8
+autocmd FileType kconfig setlocal noexpandtab tabstop=8 shiftwidth=8
 autocmd BufRead,BufNewFile *.h,*.c set filetype=c
 
+set wildoptions=fuzzy,pum
 set wildchar=<Tab> wildmenu wildmode=full
+
+" Netrw
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
 
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 " https://stackoverflow.com/a/7078429
 cmap w!! w !sudo tee > /dev/null %
 
+let g:ale_linters = {'verilog' : ['verilator'],
+\ 'haskell' : ['hls'], 'rust': ['analyzer']}
+let g:ale_haskell_hls_executable = '/usr/bin/haskell-language-server'
 ""
 " Verilog
 ""
-let g:ale_linters = {'verilog' : ['verilator'],}
 let g:formatdef_istyle = '"iStyle"'
 let g:formatters_verilog = ['istyle']
+
+""
+" C
+""
+let g:ale_c_clangtidy_checks = ['*', '-altera*', '-llvmlibc*']
+
+""
+"Python
+""
+let g:formatters_python = ['black']
 
 ""
 " Themes and plugins 
@@ -73,3 +92,28 @@ endif
 "For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
 "Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
 " < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
+
+" Disable wakatime by default
+if $wakatime_enable
+    autocmd VimEnter * echo "Wakatime enabled."
+else
+    let g:loaded_wakatime = 1
+endif
+
+" Autoformat
+noremap <leader>f :Autoformat<CR>
+
+" fzf
+noremap <leader><space>f :Files<CR>
+noremap <leader><space>b :Buffers<CR>
+noremap <leader><space>w :Windows<CR>
+
+" UltiSnips
+let g:UltiSnipsExpandTrigger="<c-s>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+let g:UltiSnipsSnippetDirectories=['mysnippet']
+
+" mouse
+noremap <leader>m :set mouse=a<CR>:set ttymouse=xterm2<CR>

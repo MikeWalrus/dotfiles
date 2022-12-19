@@ -53,3 +53,13 @@
 (package! anki-editor)
 (package! langtool)
 (package! gnuplot)
+(package! wakatime-mode)
+(package! kconfig-mode)
+
+(unpin! org-roam)
+(package! org-roam-ui)
+
+(unpin! flycheck)
+
+(package! org-download)
+(package! org-tree-slide)

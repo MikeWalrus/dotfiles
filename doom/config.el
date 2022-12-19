@@ -11,9 +11,27 @@
 
 (setq ispell-dictionary "en")
 
+(use-package! websocket
+    :after org-roam)
+
+(use-package! org-roam-ui
+    :after org-roam ;; or :after org
+;;         normally we'd recommend hooking orui after org-roam, but since org-roam does not have
+;;         a hookable mode anymore, you're advised to pick something yourself
+;;         if you don't care about startup time, use
+;;  :hook (after-init . org-roam-ui-mode)
+    :config
+    (setq org-roam-ui-sync-theme t
+          org-roam-ui-follow t
+          org-roam-ui-update-on-save t
+          org-roam-ui-open-on-start t))
+
 (after! org
   (setq org-directory "~/nextcloud/org/"
+        org-attach-id-dir "~/nextcloud/org/attach/"
+        org-cite-global-bibliography '("~/nextcloud/org/ref.bib")
         org-agenda-files '("~/nextcloud/org/agenda/" "~/nextcloud/org/")
+        org-roam-directory (file-truename "~/nextcloud/org/roam")
         org-default-notes-file (expand-file-name "notes.org" org-directory)
         org-ellipsis " ▼ "
         org-superstar-headline-bullets-list '("◉" "●" "○" "◆" "●" "○" "◆")
@@ -29,7 +47,7 @@
            "|"
            "DONE(d)"
            "CANCELLED(c)"))
-        ) ; Task has been cancelled
+        )
   )
 (after! org
   (add-to-list 'org-file-apps
@@ -50,6 +68,8 @@
       TeX-command-extra-options "-shell-escape")
 
 (setq TeX-engine "xelatex")
+
+(setq-default TeX-master nil) ; Query for master file.
 
 (setq-default evil-escape-key-sequence "jj")
 (setq-default evil-escape-delay 0.2)

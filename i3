@@ -31,7 +31,7 @@ client.background       #292D3E
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
-font pango:JetBrains Mono regular 7
+font pango:JetBrains Mono regular 6
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -40,6 +40,8 @@ font pango:JetBrains Mono regular 7
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- \
     i3lock -c 00000000 --nofork
+
+bindsym $mod+Mod1+l exec loginctl lock-session
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -133,6 +135,9 @@ bindsym $mod+minus scratchpad show
 
 # Make the currently focused window sticky
 bindsym $mod+t sticky toggle
+
+# Switch back and forth
+bindsym $mod+o workspace back_and_forth
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -232,21 +237,31 @@ exec --no-startup-id dunst
 
 exec --no-startup-id ~/.local/bin/i3wsr
 
+exec --no-startup-id redshift
+
 # Key binding to bring up pacmixer
 bindsym $mod+Shift+v exec "alacritty -e pacmixer"
 
 # Key binding for the browser
 bindsym $mod+b exec "brave --force-device-scale-factor=1.4"
 
+# goldendict
+bindsym $mod+g exec "goldendict"
+
 # Key bindings for dunst
 bindsym $mod+Shift+h exec dunstctl history-pop
 bindsym $mod+n exec dunstctl "close-all"
+bindsym $mod+Shift+n exec ~/scripts/dunst-toggle
 
 # Key binding for taking a screenshot
-bindsym $mod+Shift+s --release exec import /home/mike/screen.jpg
+bindsym $mod+Shift+s --release exec "import png:- | tee ~/screen.png | xclip -selection clipboard -t image/png"
+bindsym $mod+Shift+x --release exec "sxiv ~/screen.png"
+
 # ocr the screen
 bindsym $mod+Shift+o --release exec ~/scripts/ocr_screen.sh
 # find-cursor
 bindsym $mod+c --release exec find-cursor
 # emacsclient -nc
 bindsym $mod+x --release exec emacsclient -nc
+
+for_window [class="wemeetapp"] floating enable

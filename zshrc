@@ -1,3 +1,4 @@
+export GPG_TTY=$(tty)
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=/usr/bin:$PATH
@@ -5,6 +6,7 @@ export PATH=/usr/local/bin:$PATH
 export PATH=/usr/bin/vendor_perl:$PATH
 export PATH="$HOME"/.local/bin:$PATH
 export PATH="$HOME"/.ghcup/bin:$PATH
+export PATH="$HOME"/tmp/pure-ftpd/sbin:$PATH
 
 HISTFILE=~/.zsh_history
 HISTSIZE=1000000
@@ -105,6 +107,8 @@ alias za=zathura\ -c\ ~/.config/zathura/translusent
 alias syssus="systemctl suspend"
 alias vimwiki="vim -c ':VimwikiIndex'"
 alias lf=lfub
+
+source /etc/profile.d/lfcd.sh
 #alias code="prime-run code"
 
 
@@ -133,9 +137,17 @@ home () {
     ~/.fehbg
 }
 
+external_monitor () {
+    xrandr | awk '$2 == "connected"{print $1}' | grep -v "eDP"
+}
+
 only_ex () {
-    external_monitor="$(xrandr | awk '$2 == "connected"{print $1}' | grep -v "eDP")"
-    xrandr --output eDP1 --off --output ${external_monitor} --auto
+    ex_mon=$(external_monitor)
+    if [[ -z $ex_mon ]]; then
+        echo "${funcstack[1]}: No external monitor."
+        return 1
+    fi
+    xrandr --output eDP1 --off --output ${ex_mon} --auto
     ~/.fehbg
 }
 
@@ -166,8 +178,6 @@ screencast(){
 	"$HOME/video-$(date '+%y%m%d-%H%M-%S').mkv"
 }
 
-source /usr/share/lf/lfcd.sh
-
 # source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.zsh
 # Disable the cursor style feature
 # ZVM_CURSOR_STYLE_ENABLED=false
@@ -188,3 +198,8 @@ bindkey "^[[B" down-line-or-beginning-search # Down
 #bindkey -a '^[[3~' vi-delete-char
 bindkey '^[[3~' delete-char
 
+source /usr/share/fzf/completion.zsh
+
+if [[ -e ~/reminder ]]; then
+    source ~/reminder
+fi
