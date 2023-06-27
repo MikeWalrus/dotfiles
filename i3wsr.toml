@@ -1,0 +1,17 @@
+[aliases]
+"Alacritty" = "🖨️"
+"Emacs" = "😈"
+"Brave-browser" = "🌍"
+"Zathura" = "📄"
+"code-oss" = "code"
+"Gvim" = "🇻"
+"org\\.gnome\\.Nautilus" = "📂"
+"TelegramDesktop" = "✈️"
+"Sxiv" = "🖼️"
+"GoldenDict" = "📙"
+"Anki" = "📇"
+"icalingua" = "🐧"
+"Xournalpp" = "✏️"
+
+[general]
+separator = "|"

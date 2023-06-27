@@ -74,6 +74,8 @@ export QT_QPA_PLATFORMTHEME=qt5ct
 export MOZ_USE_XINPUT2="1"
 
 export EDITOR=vim
+export TERMINAL=alacritty
+export MANPAGER='nvim +Man!'
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment

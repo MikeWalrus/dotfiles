@@ -38,13 +38,17 @@ let g:netrw_liststyle = 3
 cmap w!! w !sudo tee > /dev/null %
 
 let g:ale_linters = {'verilog' : ['verilator'],
-\ 'haskell' : ['hls'], 'rust': ['analyzer']}
+\ 'haskell' : ['hls'], 'rust': ['analyzer'],
+\ 'systemverilog' : ['verilator']}
 let g:ale_haskell_hls_executable = '/usr/bin/haskell-language-server'
 ""
 " Verilog
 ""
 let g:formatdef_istyle = '"iStyle"'
-let g:formatters_verilog = ['istyle']
+
+let g:formatdef_verible = '"verible-verilog-format --column_limit=80 --indentation_spaces=4 -"'
+let g:formatters_systemverilog = ['verible']
+let g:formatters_verilog = ['verible']
 
 ""
 " C
@@ -117,3 +121,8 @@ let g:UltiSnipsSnippetDirectories=['mysnippet']
 
 " mouse
 noremap <leader>m :set mouse=a<CR>:set ttymouse=xterm2<CR>
+
+" zoom.vim
+let g:zoom#statustext="zoom"
+call airline#parts#define_function('zoom', 'zoom#statusline')
+let g:airline_section_b = airline#section#create_left(['hunks', 'branch', 'zoom'])

@@ -17,3 +17,16 @@
     ~/.config/dunst/dunstrc: dunstrc
     ~/.doom.d: doom
     ~/.config/lf: lf
+    ~/.config/nvim/init.vim: nvim.vim
+    ~/.config/i3wsr/config.toml: i3wsr.toml
+    ~/.config/mpv: mpv
+    ~/.config/paru/paru.conf: paru.conf
+    ~/.config/rofi/config.rasi: rofi.rasi
+    ~/.config/xmobar/xmobarrc: xmobarrc
+    ~/.config/xmonad/xmonad.hs: xmonad.hs
+    ~/.config/sway/config: sway
+    ~/.xinitrc: xinitrc
+    ~/.Xresources: Xresources
+    ~/.local/bin/:
+        glob: true
+        path: bin/*
