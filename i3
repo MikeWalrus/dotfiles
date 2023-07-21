@@ -33,7 +33,7 @@ for_window [all] title_window_icon on
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
-font pango:JetBrains Mono regular 6
+font pango:monospace 6
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -51,10 +51,11 @@ bindsym $mod+Mod1+l exec loginctl lock-session
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+set $refresh_i3blocks_audio pkill -RTMIN+1 i3blocks
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3blocks_audio
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3blocks_audio
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3blocks_audio
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3blocks_audio
 
 # Use brightnessctl to adjust brightness of the screen
 bindsym XF86MonBrightnessUp exec brightnessctl set 3000+
@@ -72,7 +73,8 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec "dmenu_run -nf '#BBBBBB' -nb '#292D3E' -sb '#7193DD' -sf '#FFFFFF' -fn 'monospace-10' -p 'open:'"
+bindsym $mod+d exec "dmenu_run -i -nf '#BBBBBB' -nb '#292D3E' -sb '#7193DD' -sf '#FFFFFF' -fn 'monospace-10' -p 'run:'"
+bindsym $mod+Shift+d exec "i3-dmenu-desktop --dmenu='dmenu -i -nf #BBBBBB -nb #292D3E -sb #7193DD -sf #FFFFFF -fn monospace-10 -p Application:'"
 bindsym $mod+comma exec "rofi -show window"
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
@@ -217,7 +219,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
   i3bar_command i3bar --transparency
-  status_command i3status
+  status_command i3blocks
   colors {
     background #00001150
     statusline #FFFFFFFF
@@ -239,7 +241,7 @@ exec --no-startup-id "alacritty -e tmux new-session clash \; split-window \; sel
 
 exec --no-startup-id dunst
 
-exec_always --no-startup-id ~/.local/bin/i3wsr
+exec_always --no-startup-id i3wsr
 
 exec --no-startup-id redshift
 
@@ -247,7 +249,7 @@ exec --no-startup-id redshift
 bindsym $mod+Shift+v exec "alacritty -e pacmixer"
 
 # Key binding for the browser
-bindsym $mod+b exec "brave --force-device-scale-factor=1.4"
+bindsym $mod+b exec "brave"
 
 # goldendict
 bindsym $mod+g exec "goldendict"

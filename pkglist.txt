@@ -266,7 +266,7 @@ palenight-gtk-theme
 pandoc-cli
 paper-icon-theme
 parallel
-paru-git
+paru-bin
 patch
 patchutils
 pavucontrol

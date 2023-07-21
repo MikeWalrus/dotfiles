@@ -15,7 +15,7 @@ order += "disk /"
 order += "disk /home"
 order += "load"
 order += "cpu_usage"
-order += "cpu_temperature 0"
+order += "cpu_temperature 9"
 order += "memory"
 order += "tztime local"
 
@@ -64,14 +64,13 @@ cpu_usage {
     format = "%usage"
 }
 
-cpu_temperature 0 {
+cpu_temperature 9 {
     format = "%degrees°"
     max_threshold = 47
-    path = "/sys/devices/platform/coretemp.0/hwmon/hwmon5/temp1_input"
 }
 
 memory {
-	format = "%used / %available"
+	format = "%available"
 		threshold_degraded = "1G"
 		format_degraded = "MEMORY < %available"
 }

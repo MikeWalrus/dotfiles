@@ -63,7 +63,7 @@ osqp
 pacmixer
 palenight-gtk-theme
 paper-icon-theme
-paru-git
+paru-bin
 pcm
 pdsh
 perl-log-dispatch

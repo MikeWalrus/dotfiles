@@ -1,0 +1,8 @@
+#! /usr/bin/bash
+
+python3 -m http.server 9999 -d /usr/share/clash-dashboard-git/ &
+
+xdg-open "http://localhost:9999/"
+
+sleep 1
+kill ${!}

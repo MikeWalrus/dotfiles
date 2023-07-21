@@ -1,3 +1,4 @@
+set nocompatible
 set cursorline
 syntax enable
 set expandtab
@@ -8,11 +9,7 @@ inoremap jj <ESC>
 set nu
 set incsearch
 set updatetime=100
-
-set nocompatible
-
 set showcmd
-
 set foldmethod=syntax
 
 set sw=4
@@ -28,6 +25,34 @@ autocmd BufRead,BufNewFile *.h,*.c set filetype=c
 
 set wildoptions=fuzzy,pum
 set wildchar=<Tab> wildmenu wildmode=full
+
+set formatoptions+=mM
+
+packadd! matchit
+
+""
+"For Emacs-style editing on the command-line: >
+""
+
+" start of line
+cnoremap <C-A>		<Home>
+" back one character
+cnoremap <C-B>		<Left>
+" delete character under cursor
+cnoremap <C-D>		<Del>
+" end of line
+cnoremap <C-E>		<End>
+" forward one character
+cnoremap <C-F>		<Right>
+" recall newer command-line
+cnoremap <C-N>		<Down>
+" recall previous (older) command-line
+cnoremap <C-P>		<Up>
+" back one word
+cnoremap <Esc><C-B>	<S-Left>
+" forward one word
+cnoremap <Esc><C-F>	<S-Right>
+
 
 " Netrw
 let g:netrw_banner = 0

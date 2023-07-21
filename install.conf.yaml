@@ -27,6 +27,9 @@
     ~/.config/sway/config: sway
     ~/.xinitrc: xinitrc
     ~/.Xresources: Xresources
+    ~/.config/fontconfig/fonts.conf: fonts.conf
+    ~/.config/i3blocks: i3blocks
+    ~/.config/brave-flags.conf: brave-flags.conf
     ~/.local/bin/:
         glob: true
         path: bin/*

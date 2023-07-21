@@ -1,16 +1,19 @@
 export GPG_TTY=$(tty)
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=/usr/bin:$PATH
-export PATH=/usr/local/bin:$PATH
-export PATH=/usr/bin/vendor_perl:$PATH
-export PATH="$HOME"/.local/bin:$PATH
-export PATH="$HOME"/.ghcup/bin:$PATH
-export PATH="$HOME"/tmp/pure-ftpd/sbin:$PATH
+export PATH=/usr/bin:"$PATH"
+export PATH=/usr/local/bin:"$PATH"
+export PATH=/usr/bin/vendor_perl:"$PATH"
+export PATH="$HOME"/.local/bin:"$PATH"
+export PATH="$HOME"/.ghcup/bin:"$PATH"
+# export PATH="$HOME"/tmp/pure-ftpd/sbin:"$PATH"
 
 HISTFILE=~/.zsh_history
-HISTSIZE=1000000
-SAVEHIST=1000000
+HISTSIZE=10000000
+SAVEHIST=10000000
+setopt INC_APPEND_HISTORY
+
+setopt autopushd
 
 autoload -U colors && colors
 PS1="%B%{$fg[red]%}%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%(?..[%?] )%{$fg[red]%}%{$reset_color%}$%b "
@@ -78,28 +81,6 @@ export TERMINAL=alacritty
 export MANPAGER='nvim +Man!'
 # export MANPATH="/usr/local/man:$MANPATH"
 
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
 alias sudo="sudo -E"
 alias ls="ls --color=auto"
 
@@ -112,46 +93,6 @@ alias lf=lfub
 
 source /etc/profile.d/lfcd.sh
 #alias code="prime-run code"
-
-
-# My own functions
-dorm () {
-    killall picom
-    xrandr --output DP3 --mode 2560x1440 --left-of eDP1 --rotate left || xrandr --output DP2 --mode 2560x1440 --left-of eDP1 --rotate left
-    bluetoothctl power on
-    auth www.bing.com &
-    ~/.fehbg
-}
-
-dorm () {
-    #killall picom
-    xrandr --output DP3 --mode 2560x1440 --above eDP1 || xrandr --output DP2 --mode 2560x1440 --above eDP1
-    bluetoothctl power on
-    nmcli radio wifi off
-    auth www.bing.com &
-    ~/.fehbg
-}
-
-home () {
-    #killall picom
-    xrandr --output DP3 --mode 2560x1440 --above eDP1 || xrandr --output DP2 --mode 2560x1440 --above eDP1
-    bluetoothctl power on
-    ~/.fehbg
-}
-
-external_monitor () {
-    xrandr | awk '$2 == "connected"{print $1}' | grep -v "eDP"
-}
-
-only_ex () {
-    ex_mon=$(external_monitor)
-    if [[ -z $ex_mon ]]; then
-        echo "${funcstack[1]}: No external monitor."
-        return 1
-    fi
-    xrandr --output eDP1 --off --output ${ex_mon} --auto
-    ~/.fehbg
-}
 
 countdown(){
     date1=$((`date +%s` + $1));
