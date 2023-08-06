@@ -1,0 +1,12 @@
+#! /usr/bin/sh
+
+mode=$(makoctl mode)
+
+if [[ "${mode}" == *"dnd"* ]]; then
+    makoctl mode -r dnd
+    notify-send --icon=call-start "Notification on"
+else
+    notify-send --icon=call-stop "Notification paused"
+    sleep 1
+    makoctl mode -a dnd
+fi

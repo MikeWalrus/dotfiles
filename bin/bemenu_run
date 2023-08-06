@@ -1,0 +1,2 @@
+#! /usr/bin/sh
+dmenu_path | bemenu "$@" | ${SHELL:-"/bin/sh"} 

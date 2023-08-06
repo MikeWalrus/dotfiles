@@ -283,4 +283,4 @@ include /etc/sway/config.d/*
 set $laptop_screen "IVO 0x8C45 Unknown"
 set $aoc_monitor "AOC Q2777 AJGL89A000082"
 
-output $laptop_screen scale 1.4
+# output $laptop_screen scale 1.4

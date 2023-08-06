@@ -1,0 +1,12 @@
+#! /usr/bin/sh
+
+is_paused=$(dunstctl is-paused)
+
+if [ ${is_paused} = "false" ]; then
+    notify-send --icon=call-stop "Notification paused"
+    sleep 1
+    dunstctl set-paused true
+else
+    dunstctl set-paused false
+    notify-send --icon=call-start "Notification on"
+fi

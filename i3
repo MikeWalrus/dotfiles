@@ -237,7 +237,7 @@ bar {
 
 exec --no-startup-id picom -b
 
-exec --no-startup-id "alacritty -e tmux new-session clash \; split-window \; select-layout even-horizontal"
+exec --no-startup-id "alacritty -e tmux_clash"
 
 exec --no-startup-id dunst
 
@@ -272,6 +272,9 @@ bindsym $mod+x --release exec emacsclient -nc
 
 bindsym $mod+Shift+f --release exec wmfocus -f "JetBrains Mono":400
 
+bindsym $mod+z --release exec boomer
+
 for_window [class="wemeetapp"] floating enable
 for_window [class="matplotlib"] floating enable
 for_window [class="chromium"] floating enable
+for_window [class="ripdrag"] floating enable
