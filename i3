@@ -237,7 +237,7 @@ bar {
 
 exec --no-startup-id picom -b
 
-exec --no-startup-id "alacritty -e tmux_clash"
+# exec --no-startup-id "alacritty -e tmux_clash"
 
 exec --no-startup-id dunst
 

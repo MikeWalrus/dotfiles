@@ -16,9 +16,6 @@ arc-icon-theme
 arch-hs
 archlinux-wallpaper
 aria2
-arm-linux-gnueabi-gcc
-arm-none-eabi-gcc
-arm-none-eabi-gdb
 ascii-image-converter
 asciinema
 asp
@@ -36,9 +33,11 @@ bear
 bemenu
 bftpd
 biber
+bind
 binutils
 birdtray
 bison
+bitwarden
 bluez
 bluez-utils
 boomer-git
@@ -49,6 +48,7 @@ breeze
 brightnessctl
 bsd-games
 btop
+btrfs-heatmap
 bup
 cabal-install
 calibre
@@ -66,6 +66,7 @@ cloc
 cloud-utils
 cmatrix
 colorpicker
+compsize
 compton-conf
 convmv
 coqide
@@ -87,6 +88,7 @@ diffoscope
 dino
 discord
 dmenu
+dmg2img
 dns-over-https
 docker-compose
 docx-you-want
@@ -102,10 +104,11 @@ dynamorio-git
 ed
 efibootmgr
 element-desktop
-emacs-nativecomp
+emacs-wayland
 emote
 ethtool
 evince
+evolution
 fakeroot
 farbfeld
 fcitx5
@@ -144,6 +147,8 @@ git-filter-repo
 github-cli
 glmark2-git
 glow
+gnome-calendar
+gnome-clocks
 gnome-disk-utility
 gnome-keyring
 gnome-themes-extra
@@ -155,6 +160,7 @@ gpodder
 grim
 grimblast-git
 gromit-mpx
+grpcurl
 grub
 gst-plugin-pipewire
 gtk4-demos
@@ -178,6 +184,7 @@ hw-probe
 hyprland
 hyprpaper
 hyprpicker
+hyprprop-git
 i3-wm
 i3blocks
 i3lock-color
@@ -205,6 +212,7 @@ kcolorpicker
 kdenlive
 kernel-modules-hook
 kitty
+kooha
 koreader-bin
 krop
 languagetool
@@ -213,6 +221,7 @@ lib32-gcc-libs
 libffado
 libgccjit
 libgnome-keyring
+libguestfs
 libimobiledevice-git
 libimobiledevice-glue-git
 libisoburn
@@ -223,7 +232,7 @@ lightly-git
 linux
 linux-firmware
 linux-headers
-linuxqq-nt-bwrap
+linuxqq
 logisim
 logisim-evolution
 lrzsz
@@ -284,6 +293,7 @@ ocrmypdf
 onedrive-abraunegg
 openbsd-netcat
 openssh
+opentabletdriver-git
 orchis-theme
 os-prober
 osqp
@@ -328,6 +338,7 @@ pkgstats
 playerctl
 pnpm
 polyphone
+postman-bin
 powertop
 proxychains-ng
 pspp
@@ -390,6 +401,7 @@ screenkey
 scrt
 seahorse
 sealcrypto
+shellcheck
 shfmt
 simh
 sioyek-appimage
@@ -452,6 +464,7 @@ traceroute
 trayer
 tree
 ttf-dejavu
+ttf-font-awesome
 ttf-jetbrains-mono
 ttf-ms-win11-auto
 ttf-ms-win11-auto-zh_cn
@@ -461,20 +474,21 @@ ttymidi
 uboot-tools
 ucblogo
 uclogic-tools
-ueberzug
+ueberzugpp
 ufw
 umbrello
 unarchiver
+units
 unrar
 unzip
 uxplay
+v4l2loopback-dkms
 valgrind
 vbam-wx
 vdpauinfo
 ventoy-bin
 verible-git
 verilator
-verilog-port-git
 vi
 vim-airline
 vim-ale-git
@@ -495,6 +509,8 @@ vim-vimwiki
 vim-wayland-clipboard-git
 vim-youcompleteme-git
 vim-zoom
+vinagre
+virt-manager
 visual-studio-code-bin
 vlc
 volctl
@@ -502,7 +518,8 @@ vsftpd
 w3m
 wakapi-bin
 wakatime
-waybar
+waybar-hyprland-git
+wayvnc
 weechat
 wemeet-bin
 wev
@@ -514,6 +531,7 @@ wireshark-cli
 wireshark-qt
 wkhtmltopdf
 wl-clipboard
+wlprop
 wlr-randr
 wlsunset-git
 wmctrl
@@ -581,7 +599,6 @@ xorg-xrefresh
 xorg-xset
 xorg-xsetroot
 xorg-xvinfo
-xorg-xwayland-hidpi-xprop
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
@@ -603,6 +620,7 @@ zoom
 zotero-bin
 zsh
 zsh-autosuggestions
+zsh-completions
 zsh-history-substring-search
 zsh-syntax-highlighting
 zsh-z-git

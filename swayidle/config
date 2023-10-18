@@ -1,3 +1,3 @@
-timeout 300 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on'
-timeout 305 'swaylock'
-before-sleep 'swaylock'
+timeout 300 'makoctl mode -a large && notify-send "Suspend" "in 10 seconds"' resume 'makoctl mode -r large && makoctl dismiss'
+timeout 310 'systemctl suspend'
+before-sleep 'swaylock-my'

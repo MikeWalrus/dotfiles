@@ -14,3 +14,12 @@ icon-path=/usr/share/icons/Adwaita:/usr/share/icons/palenight
 
 [mode=dnd]
 invisible=1
+
+[mode=large]
+anchor=center
+width=1000
+height=1000
+padding=100
+font=san-serif 100
+background-color=#00000000
+default-timeout=0

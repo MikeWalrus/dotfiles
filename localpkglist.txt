@@ -2,7 +2,6 @@ alacritty-git
 altserver-bin
 anki-bin
 apple-fonts
-arm-linux-gnueabi-gcc
 ascii-image-converter
 birdtray
 boomer-git
@@ -30,12 +29,14 @@ goldendict-git
 golly
 grimblast-git
 gromit-mpx
+grpcurl
 gtkwave-gtk3
 hdrmerge
 hotspot
 hplip-plugin
 hw-probe
 hyprpicker
+hyprprop-git
 i3lock-color
 i3wsr
 icu66
@@ -47,7 +48,7 @@ libimobiledevice-git
 libimobiledevice-glue-git
 libwaftp-dev
 lightly-git
-linuxqq-nt-bwrap
+linuxqq
 logisim
 logisim-evolution
 mariadb-jdbc
@@ -66,6 +67,7 @@ nwg-displays
 nwg-look
 ocrmypdf
 onedrive-abraunegg
+opentabletdriver-git
 orchis-theme
 osqp
 pacmixer
@@ -79,6 +81,7 @@ perl-log-dispatch
 perl-time-out
 pin
 pip2pkgbuild
+postman-bin
 pspp
 python-gdbgui
 python-pypi2pkgbuild
@@ -109,10 +112,11 @@ ttf-pingfang-git
 ttf-twemoji
 ttymidi
 uclogic-tools
+ueberzugpp
+units
 uxplay
 ventoy-bin
 verible-git
-verilog-port-git
 vim-ale-git
 vim-arm-syntax-git
 vim-autoformat-git
@@ -130,9 +134,11 @@ vim-zoom
 visual-studio-code-bin
 volctl
 wakapi-bin
+waybar-hyprland-git
 wemeet-bin
 wev
 wkhtmltopdf
+wlprop
 wlr-randr
 wlsunset-git
 wmenu
@@ -140,10 +146,10 @@ wmutils-git
 xdg-ninja
 xilinx-vivado-dummy
 xinput-gui
-xorg-xwayland-hidpi-xprop
 xournalpp-git
 xpub
 xsnow-comp-patch-git
+youtube-dl
 zaread-git
 zoom
 zotero-bin

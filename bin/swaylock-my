@@ -1,0 +1,3 @@
+#! /usr/bin/bash
+makoctl mode -a dnd
+swaylock && makoctl mode -r dnd

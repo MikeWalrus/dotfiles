@@ -68,7 +68,7 @@ export TERM=xterm-256color
 
 export XIM_PROGRAM=fcitx5
 export XIM=fcitx5
-export GTK_IM_MODULE=fcitx5
+export GTK_IM_MODULE=
 export QT_IM_MODULE=fcitx5
 export XMODIFIERS="@im=fcitx5"
 
