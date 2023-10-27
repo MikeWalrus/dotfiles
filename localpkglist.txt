@@ -7,6 +7,7 @@ birdtray
 boomer-git
 bouml
 brave-bin
+btdu
 cellwriter
 clash-dashboard-git
 clash-premium-bin
@@ -15,8 +16,8 @@ colorpicker
 compton-conf
 docx-you-want
 dotbot
+doxygen-git
 drawio-desktop-bin
-dynamorio
 dynamorio-git
 emote
 farbfeld
@@ -33,6 +34,7 @@ grpcurl
 gtkwave-gtk3
 hdrmerge
 hotspot
+howdy-beta-git
 hplip-plugin
 hw-probe
 hyprpicker
@@ -48,6 +50,7 @@ libimobiledevice-git
 libimobiledevice-glue-git
 libwaftp-dev
 lightly-git
+linux-enable-ir-emitter
 linuxqq
 logisim
 logisim-evolution
@@ -59,7 +62,6 @@ mipsel-elf-gdb
 mlpolygen-git
 modelsim-intel-starter
 mtm-git
-my-riscv-gnu-toolchain
 mysqltuner
 nautilus-open-any-terminal
 notify-send-py
@@ -70,6 +72,8 @@ onedrive-abraunegg
 opentabletdriver-git
 orchis-theme
 osqp
+pacgraph
+pacman-log-orphans-hook
 pacmixer
 palenight-gtk-theme
 pam_usb
@@ -102,6 +106,7 @@ surf
 svgo
 swaylock-effects
 sxlock-git
+sxmo-dmenu
 systemd-bt-sleep
 thunderbird-bin
 tla-toolbox

@@ -16,7 +16,9 @@ arc-icon-theme
 arch-hs
 archlinux-wallpaper
 aria2
+asar
 ascii-image-converter
+asciidoc
 asciinema
 asp
 aspell
@@ -25,10 +27,13 @@ aspnet-runtime
 audacity
 autoconf
 automake
+autopep8
 base
 base-devel
 bashtop
 bat
+bazel
+bc
 bear
 bemenu
 bftpd
@@ -41,22 +46,26 @@ bitwarden
 bluez
 bluez-utils
 boomer-git
+boost
 bouml
 bpytop
 brave-bin
 breeze
 brightnessctl
 bsd-games
+btdu
 btop
 btrfs-heatmap
 bup
 cabal-install
 calibre
 cargo-flamegraph
+catch2
 cellwriter
 check
 check-docs
 checkbashisms
+cheese
 chromium
 ckermit
 clash-dashboard-git
@@ -80,6 +89,7 @@ crosstool-ng
 ctags
 cups
 cups-pdf
+darkhttpd
 darktable
 dash
 debootstrap
@@ -87,7 +97,6 @@ devtools
 diffoscope
 dino
 discord
-dmenu
 dmg2img
 dns-over-https
 docker-compose
@@ -95,11 +104,13 @@ docx-you-want
 dos2unix
 dotbot
 dotnet-sdk
+doxygen-git
 drawing
 drawio-desktop-bin
+dtools
+dub
 dunst
 dvtm
-dynamorio
 dynamorio-git
 ed
 efibootmgr
@@ -109,6 +120,8 @@ emote
 ethtool
 evince
 evolution
+expac
+extra-cmake-modules
 fakeroot
 farbfeld
 fcitx5
@@ -152,7 +165,9 @@ gnome-clocks
 gnome-disk-utility
 gnome-keyring
 gnome-themes-extra
+gnome-weather
 gnuplot
+go
 goldendict-git
 golly
 gparted
@@ -176,6 +191,7 @@ hdrmerge
 hexedit
 hoogle
 hotspot
+howdy-beta-git
 hplip
 hplip-plugin
 htop
@@ -216,6 +232,7 @@ kooha
 koreader-bin
 krop
 languagetool
+ldc
 lf
 lib32-gcc-libs
 libffado
@@ -230,6 +247,7 @@ libva-utils
 libwaftp-dev
 lightly-git
 linux
+linux-enable-ir-emitter
 linux-firmware
 linux-headers
 linuxqq
@@ -260,10 +278,11 @@ modelsim-intel-starter
 monero
 mono
 mono-msbuild
+moreutils
 mpv
+mpv-mpris
 mtm-git
 mupdf
-my-riscv-gnu-toolchain
 mysqltuner
 namcap
 nasm
@@ -273,6 +292,7 @@ ncdu
 neofetch
 neovide
 neovim
+neovim-qt
 nethack
 network-manager-applet
 networkmanager
@@ -297,7 +317,9 @@ opentabletdriver-git
 orchis-theme
 os-prober
 osqp
+pacgraph
 pacman-contrib
+pacman-log-orphans-hook
 pacmixer
 pahole
 palenight-gtk-theme
@@ -347,6 +369,7 @@ pv
 pycharm-community-edition
 python-axolotl
 python-black
+python-build
 python-flask-babel
 python-gdbgui
 python-httpx
@@ -354,6 +377,7 @@ python-icecream
 python-isort
 python-matplotlib
 python-myst-parser
+python-nox
 python-numpy
 python-pandas
 python-parsedatetime
@@ -399,6 +423,7 @@ scrcpy
 screen
 screenkey
 scrt
+sdl12-compat
 seahorse
 sealcrypto
 shellcheck
@@ -425,6 +450,7 @@ swayidle
 swaylock-effects
 sxiv
 sxlock-git
+sxmo-dmenu
 syslinux
 systemd-bt-sleep
 telegram-desktop
@@ -452,6 +478,7 @@ texlive-publishers
 tftp-hpa
 thermald
 thunderbird-bin
+tidy
 tigervnc
 tla-toolbox
 tla-tools

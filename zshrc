@@ -81,7 +81,6 @@ export TERMINAL=alacritty
 export MANPAGER='nvim +Man!'
 # export MANPATH="/usr/local/man:$MANPATH"
 
-alias sudo="sudo -E"
 alias ls="ls --color=auto"
 
 alias auth='chromium --no-proxy-server'
