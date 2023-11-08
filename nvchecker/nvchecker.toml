@@ -1,0 +1,55 @@
+[__config__]
+oldver = "old_ver.json"
+newver = "new_ver.json"
+keyfile = "keyfile.toml"
+
+[dynamorio]
+source = "github"
+github = "DynamoRIO/dynamorio"
+use_max_tag = true
+exclude_regex = "cron.*"
+prefix = "release_"
+
+[doxygen]
+source = "github"
+github = "doxygen/doxygen"
+use_latest_release = true
+from_pattern = 'Release_(\d+)_(\d+)_(\d+)'
+to_pattern = '\1.\2.\3'
+
+[vim-fontsize]
+source = "github"
+github = "drmikehenry/vim-fontsize"
+use_max_tag = true
+prefix = "v"
+
+[sxmo-dmenu]
+source = "git"
+git = "https://git.sr.ht/~mil/sxmo-dmenu"
+
+[gcc]
+source = "regex"
+url = "https://gcc.gnu.org/releases.html"
+regex = 'GCC (\d+\.\d+)'
+
+[binutils]
+source = "regex"
+url = "https://ftp.gnu.org/gnu/binutils/"
+regex = 'binutils-(\d+\.\d+)'
+
+[vim-zoom]
+source = "github"
+github = "dhruvasagar/vim-zoom"
+use_max_tag = true
+prefix = "v"
+
+[goldendict]
+source = "github"
+github = "goldendict/goldendict"
+use_max_tag = true
+
+[find-cursor]
+source = "github"
+github = "arp242/find-cursor"
+use_max_tag = true
+prefix = "v"

@@ -88,8 +88,8 @@ let g:formatters_python = ['black']
 ""
 " Themes and plugins 
 ""
-let g:vimwiki_list = [{'path': '~/nextcloud/vimwiki',
-\ 'path_html': '~/nextcloud/vimwiki_html',
+let g:vimwiki_list = [{'path': '~/docs/vimwiki',
+\ 'path_html': '~/docs/vimwiki_html',
 \ 'auto_toc': 1,
 \ 'auto_diary_index': 1,
 \ 'auto_generate_links': 1,

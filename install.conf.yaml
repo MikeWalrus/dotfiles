@@ -40,3 +40,4 @@
     ~/.local/bin/:
         glob: true
         path: bin/*
+    ~/.config/nvchecker: nvchecker

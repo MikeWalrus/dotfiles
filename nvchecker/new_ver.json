@@ -1,0 +1,11 @@
+{
+  "binutils": "2.41",
+  "doxygen": "1.9.8",
+  "dynamorio": "10.0.0",
+  "find-cursor": "1.8",
+  "gcc": "13.2",
+  "goldendict": "1.5.0",
+  "sxmo-dmenu": "5.0.14",
+  "vim-fontsize": "0.5.0",
+  "vim-zoom": "0.3.4"
+}

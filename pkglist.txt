@@ -47,7 +47,6 @@ bluez
 bluez-utils
 boomer-git
 boost
-bouml
 bpytop
 brave-bin
 breeze
@@ -73,6 +72,7 @@ clash-premium-bin
 clashup
 cloc
 cloud-utils
+cloudflare-wrangler2
 cmatrix
 colorpicker
 compsize
@@ -111,6 +111,7 @@ dtools
 dub
 dunst
 dvtm
+dynamorio
 dynamorio-git
 ed
 efibootmgr
@@ -121,9 +122,11 @@ ethtool
 evince
 evolution
 expac
+external-editor-revived-git
 extra-cmake-modules
 fakeroot
 farbfeld
+fbgrab
 fcitx5
 fcitx5-chinese-addons
 fcitx5-configtool
@@ -162,8 +165,11 @@ glmark2-git
 glow
 gnome-calendar
 gnome-clocks
+gnome-contacts
 gnome-disk-utility
 gnome-keyring
+gnome-maps
+gnome-text-editor
 gnome-themes-extra
 gnome-weather
 gnuplot
@@ -221,6 +227,7 @@ iverilog
 j4-dmenu-desktop
 jack2
 jami-qt
+jdk-openjdk
 jwasm
 kanshi
 kbi
@@ -251,6 +258,7 @@ linux-enable-ir-emitter
 linux-firmware
 linux-headers
 linuxqq
+localsend-bin
 logisim
 logisim-evolution
 lrzsz
@@ -263,7 +271,6 @@ mariadb
 mariadb-jdbc
 mathjax
 maven
-meh-git
 meld
 mesa-demos
 mesa-utils
@@ -304,8 +311,10 @@ notify-send-py
 nss-mdns
 nsxiv
 ntfs-3g
+nvchecker
 nvme-cli
 nwg-displays
+nwg-drawer-bin
 nwg-look
 nyx
 obs-studio
@@ -327,8 +336,9 @@ pam_usb
 pandoc-cli
 paper-icon-theme
 parallel
-paru-bin
+paru-git
 patch
+patchelf
 patchutils
 pavucontrol
 pcm
@@ -350,7 +360,6 @@ perl-yaml-tiny
 picocom
 picom
 pin
-pip2pkgbuild
 pipewire
 pipewire-alsa
 pipewire-docs
@@ -358,6 +367,7 @@ pipewire-pulse
 pkgconf
 pkgstats
 playerctl
+plots
 pnpm
 polyphone
 postman-bin
@@ -366,6 +376,7 @@ proxychains-ng
 pspp
 pulsemixer
 pv
+pybind11
 pycharm-community-edition
 python-axolotl
 python-black
@@ -374,6 +385,7 @@ python-flask-babel
 python-gdbgui
 python-httpx
 python-icecream
+python-installer
 python-isort
 python-matplotlib
 python-myst-parser
@@ -389,6 +401,7 @@ python-pyserial
 python-pytimeparse
 python-qrcode
 python-rpyc
+python-setuptools-scm
 python-sphinx_rtd_theme
 python-sqlparse
 python-termcolor
@@ -396,7 +409,6 @@ python-tikzplotlib-git
 qemu-desktop
 qemu-emulators-full
 qsynth
-qt4-bin
 qt5ct
 radare2
 ranger
@@ -419,13 +431,13 @@ samba
 sane-airscan
 sbt
 sc-im
+scdoc
 scrcpy
 screen
 screenkey
 scrt
 sdl12-compat
 seahorse
-sealcrypto
 shellcheck
 shfmt
 simh
@@ -448,6 +460,7 @@ svgo
 sway
 swayidle
 swaylock-effects
+swift-bin
 sxiv
 sxlock-git
 sxmo-dmenu
@@ -477,7 +490,7 @@ texlive-pstricks
 texlive-publishers
 tftp-hpa
 thermald
-thunderbird-bin
+thunderbird
 tidy
 tigervnc
 tla-toolbox
@@ -506,6 +519,7 @@ ufw
 umbrello
 unarchiver
 units
+unoconv
 unrar
 unzip
 uxplay
@@ -525,7 +539,6 @@ vim-commentary
 vim-fontsize
 vim-fzf-git
 vim-gitgutter
-vim-localvimrc
 vim-palenight-git
 vim-pkgbuild-git
 vim-spell-en
@@ -570,6 +583,7 @@ wqy-microhei
 xclip
 xdg-desktop-portal-hyprland
 xdg-ninja
+xdg-user-dirs
 xdg-utils
 xdotool
 xf86-input-wacom

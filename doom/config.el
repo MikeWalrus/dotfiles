@@ -27,11 +27,11 @@
           org-roam-ui-open-on-start t))
 
 (after! org
-  (setq org-directory "~/nextcloud/org/"
-        org-attach-id-dir "~/nextcloud/org/attach/"
-        org-cite-global-bibliography '("~/nextcloud/org/ref.bib")
-        org-agenda-files '("~/nextcloud/org/agenda/" "~/nextcloud/org/")
-        org-roam-directory (file-truename "~/nextcloud/org/roam")
+  (setq org-directory "~/docs/org/"
+        org-attach-id-dir "~/docs/org/attach/"
+        org-cite-global-bibliography '("~/docs/org/ref.bib")
+        org-agenda-files '("~/docs/org/agenda/" "~/docs/org/")
+        org-roam-directory (file-truename "~/docs/org/roam")
         org-default-notes-file (expand-file-name "notes.org" org-directory)
         org-ellipsis " ▼ "
         org-superstar-headline-bullets-list '("◉" "●" "○" "◆" "●" "○" "◆")
