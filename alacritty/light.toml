@@ -1,0 +1,20 @@
+[colors.cursor]
+cursor = "#FF9940"
+text = "CellBackground"
+
+[colors.normal]
+black = "#444444"
+blue = "#005f87"
+cyan = "#0087af"
+green = "#5f8700"
+magenta = "#8700af"
+red = "#af0000"
+white = "#eeeeee"
+yellow = "#d75f00"
+
+[colors.primary]
+background = "#FFFFFF"
+foreground = "#090300"
+
+[window]
+opacity = 0.7

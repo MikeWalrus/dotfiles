@@ -7,7 +7,7 @@
                       // Choose the order of the modules
         "modules-left": ["hyprland/workspaces"],
         "modules-center": ["custom/media"],
-        "modules-right": ["idle_inhibitor", "pulseaudio", "network", "custom/netspeed", "custom/btrfs", "memory", "cpu", "temperature", "battery", "clock", "tray"],
+        "modules-right": ["custom/darkmode", "idle_inhibitor", "pulseaudio", "network", "custom/netspeed", "custom/btrfs", "memory", "cpu", "temperature", "battery", "clock", "tray"],
         // Modules configuration
         // "sway/workspaces": {
         //     "disable-scroll": true,
@@ -179,5 +179,10 @@
             "escape": false,
             "min-length": 12,
         },
+        "custom/darkmode": {
+            "exec": "color-scheme-waybar.sh",
+            "on-click": "toggle-dark-mode.sh",
+            "signal": 1
+        }
 }
 

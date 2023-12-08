@@ -1,0 +1,8 @@
+[Unit]
+Description=Change wallpaper at set times.
+
+[Service]
+Type=oneshot
+Environment=DISPLAY=:0
+ExecStart=/home/mike/.local/bin/set_wallpaper.sh
+

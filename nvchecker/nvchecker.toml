@@ -53,3 +53,9 @@ source = "github"
 github = "arp242/find-cursor"
 use_max_tag = true
 prefix = "v"
+
+[vim-lumen]
+source = "github"
+github = "vimpostor/vim-lumen"
+use_max_tag = true
+prefix = "v"

@@ -1,3 +1,3 @@
-timeout 300 'makoctl mode -a large && notify-send "Suspend" "in 10 seconds"' resume 'makoctl mode -r large && makoctl dismiss'
-timeout 310 'systemctl suspend'
+timeout 120 'notify-send -p -t 60000 "Suspend" "in 60 seconds" > /tmp/suspend-notification-id' resume 'makoctl dismiss -n $(</tmp/suspend-notification-id)'
+timeout 180 'systemctl suspend'
 before-sleep 'swaylock-my'

@@ -13,13 +13,14 @@ default-timeout=10000
 icon-path=/usr/share/icons/Adwaita:/usr/share/icons/palenight
 
 [mode=dnd]
-invisible=1
+# invisible=1
 
-[mode=large]
+[summary=Suspend]
+invisible=0
 anchor=center
-width=1000
+width=1500
 height=1000
 padding=100
 font=san-serif 100
-background-color=#00000000
+background-color=#32374D70
 default-timeout=0

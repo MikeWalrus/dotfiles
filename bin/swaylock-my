@@ -1,3 +1,11 @@
 #! /usr/bin/bash
+monitors=$(hyprctl monitors | awk '/Monitor/ {print $2}')
+
+images_args=()
+
+for monitor in $monitors; do
+    images_args+=( -i "$monitor":"$(rand_image.sh)" )
+done
+
 makoctl mode -a dnd
-swaylock && makoctl mode -r dnd
+swaylock "${images_args[@]}" && makoctl mode -r dnd

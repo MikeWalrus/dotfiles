@@ -1,0 +1,22 @@
+working_directory = "/home/mike/"
+import = ["~/.config/alacritty/color.toml"]
+
+[colors.selection]
+background = "CellForeground"
+text = "CellBackground"
+
+[cursor.style]
+shape = "Block"
+
+[env]
+TERM = "xterm-256color"
+
+[font.normal]
+family = "monospace"
+style = "Medium"
+
+[font]
+size = 18.0
+
+[window]
+decorations = "none"

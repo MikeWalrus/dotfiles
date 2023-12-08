@@ -41,4 +41,4 @@ Below)
 esac
 
 xrandr --output eDP1 --auto --output $external_monitor --auto $position eDP1
-~/.fehbg
+set_wallpaper.sh

@@ -64,17 +64,7 @@ if [ "$TERM" = "linux" ]; then
     clear
 fi
 
-export TERM=xterm-256color
-
-export XIM_PROGRAM=fcitx
-export XIM=fcitx
-export GTK_IM_MODULE=
-export QT_IM_MODULE=fcitx
-export XMODIFIERS="@im=fcitx"
-
 export QT_QPA_PLATFORMTHEME=qt5ct
-
-export MOZ_USE_XINPUT2="1"
 
 export EDITOR=vim
 export TERMINAL=alacritty
@@ -148,6 +138,8 @@ fi
 
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_STATE_HOME="$HOME/.local/state"
 
 export GOPATH="$XDG_DATA_HOME"/go
 export GOMODCACHE="$XDG_CACHE_HOME"/go/mod

@@ -43,7 +43,8 @@ cnoremap <C-D>		<Del>
 " end of line
 cnoremap <C-E>		<End>
 " forward one character
-cnoremap <C-F>		<Right>
+" (Use vim normal mode instead)
+" cnoremap <C-F>		<Right> 
 " recall newer command-line
 cnoremap <C-N>		<Down>
 " recall previous (older) command-line
@@ -109,9 +110,18 @@ set background=dark
 let g:palenight_terminal_italics=1
 let g:palenight_color_overrides = {'white': { 'gui' : '#FFFFFF', "cterm":"15", "cterm16": "7" }}
 
-let g:airline_theme = "palenight"
+function DarkTheme()
+    let g:airline_theme = "palenight"
+    colorscheme palenight
+endfunction
 
-colorscheme palenight
+function LightTheme()
+    let g:airline_theme = "papercolor"
+    colorscheme PaperColor
+endfunction
+
+au User LumenLight call LightTheme()
+au User LumenDark call DarkTheme()
 
 if (has("nvim"))
 "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >

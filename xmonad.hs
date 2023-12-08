@@ -39,7 +39,7 @@ myStartupHook = do
         \ i3lock -c 00000000 --nofork"
     spawnOnce "dunst"
     spawnOnce "redshift"
-    spawn     "~/.fehbg"
+    spawn     "set_wallpaper.sh"
 
 refresh_i3status = "&& killall -SIGUSR1 i3status"
 

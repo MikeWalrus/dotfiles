@@ -57,16 +57,20 @@ export https_proxy=http://127.0.0.1:7890
 
 export TERM=xterm-256color
 
-export XIM_PROGRAM=fcitx5
-export XIM=fcitx5
-export GTK_IM_MODULE=fcitx5
-export QT_IM_MODULE=fcitx5
-export XMODIFIERS="@im=fcitx5"
+export QT_QPA_PLATFORMTHEME=qt5ct
+
+export XIM_PROGRAM=fcitx
+export XIM=fcitx
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS="@im=fcitx"
+
+export QT_QPA_PLATFORMTHEME=qt5ct
 
 eval $(gnome-keyring-daemon --start)
 export SSH_AUTH_SOCK
 
-~/.fehbg
+set_wallpaper.sh
 
 case $WM in
     xmonad)

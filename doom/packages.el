@@ -63,3 +63,6 @@
 
 (package! org-download)
 (package! org-tree-slide)
+(package! auto-dark)
+(package! modus-themes)
+(package! leuven-theme)

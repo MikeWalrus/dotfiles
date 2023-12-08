@@ -4,16 +4,21 @@
 
 - clean: ['~']
 
+- create:
+    - ~/.config/alacritty
+
 - link:
     ~/.vimrc: vimrc
     ~/.gvimrc: gvimrc
     ~/.zshrc: zshrc
     ~/.config/i3/config: i3 
-    ~/.tmux.conf: tmux.conf
+    ~/.config/tmux/tmux.conf: tmux.conf
     ~/.config/i3status/config: i3status
     ~/.config/picom/picom.conf: picom.conf
-    ~/.config/alacritty/alacritty.yml: alacritty.yml
-    ~/.config/alacritty/alacritty.toml: alacritty.toml
+    ~/.config/alacritty/alacritty.yml: alacritty/alacritty.yml
+    ~/.config/alacritty/alacritty.toml: alacritty/alacritty.toml
+    ~/.config/alacritty/light.toml: alacritty/light.toml
+    ~/.config/alacritty/dark.toml: alacritty/dark.toml
     ~/.config/sxiv/exec: sxiv
     ~/.config/dunst/dunstrc: dunstrc
     ~/.doom.d: doom
@@ -41,3 +46,11 @@
         glob: true
         path: bin/*
     ~/.config/nvchecker: nvchecker
+    ~/.config/bat/config: bat.config
+    ~/.config/hyprland-autoname-workspaces : hyprland-autoname-workspaces
+    ~/.config/xdg-desktop-portal: xdg-desktop-portal
+    ~/.config/latexmk/latexmkrc: latexmkrc
+    ~/.config/systemd/user/:
+        glob: true
+        path: systemd/user/*
+    ~/.config/environment.d: environment.d
