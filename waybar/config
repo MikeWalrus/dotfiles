@@ -7,7 +7,7 @@
                       // Choose the order of the modules
         "modules-left": ["hyprland/workspaces"],
         "modules-center": ["custom/media"],
-        "modules-right": ["custom/darkmode", "idle_inhibitor", "pulseaudio", "network", "custom/netspeed", "custom/btrfs", "memory", "cpu", "temperature", "battery", "clock", "tray"],
+        "modules-right": ["custom/darkmode", "idle_inhibitor", "custom/aa", "pulseaudio", "network", "custom/netspeed", "custom/btrfs", "memory", "cpu", "temperature", "battery", "clock", "tray"],
         // Modules configuration
         // "sway/workspaces": {
         //     "disable-scroll": true,
@@ -178,6 +178,11 @@
             "return-type": "json",
             "escape": false,
             "min-length": 12,
+        },
+        "custom/aa": {
+            "exec": "mako-dnd-waybar.sh",
+            "on-click": "mako-toggle",
+            "signal": 2
         },
         "custom/darkmode": {
             "exec": "color-scheme-waybar.sh",

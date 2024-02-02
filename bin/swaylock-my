@@ -1,11 +1,26 @@
 #! /usr/bin/bash
-monitors=$(hyprctl monitors | awk '/Monitor/ {print $2}')
 
-images_args=()
+main() {
+    local ready_fd="$1"
 
-for monitor in $monitors; do
-    images_args+=( -i "$monitor":"$(rand_image.sh)" )
-done
+    local monitors=$(hyprctl monitors | awk '/Monitor/ {print $2}')
+    local images_args=()
+    for monitor in $monitors; do
+        images_args+=(-i "$monitor":"$(rand_image.sh)")
+    done
 
-makoctl mode -a dnd
-swaylock "${images_args[@]}" && makoctl mode -r dnd
+    local modes=$(makoctl mode)
+    local was_dnd
+    if [[ "$mode" == *"dnd"* ]]; then
+        was_dnd=true
+    else
+        was_dnd=false
+        makoctl mode -a dnd
+    fi
+    swaylock --ready-fd="$ready_fd" "${images_args[@]}"
+    if [[ "$was_dnd" = true ]]; then
+        makoctl mode -r dnd
+    fi
+}
+
+main "$@"

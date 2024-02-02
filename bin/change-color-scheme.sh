@@ -21,15 +21,23 @@ on_change() {
     pkill --signal=RTMIN+1 waybar
 }
 
-dbus-monitor "interface='org.freedesktop.portal.Settings',member='SettingChanged'" |
-    while read -r line; do
-        if [[ $line =~ .*prefer-(.*)\" ]]; then
-            color="${BASH_REMATCH[1]}"
-            if [[ $color == "light" ]]; then
-                to_light
-            elif [[ $color == "dark" ]]; then
-                to_dark
+connect_wayland_socket() {
+    socat - UNIX-CONNECT:"$XDG_RUNTIME_DIR/$WAYLAND_DISPLAY" >/dev/null
+}
+
+main() {
+    dbus-monitor "interface='org.freedesktop.portal.Settings',member='SettingChanged'" |
+        while read -r line; do
+            if [[ $line =~ .*prefer-(.*)\" ]]; then
+                color="${BASH_REMATCH[1]}"
+                if [[ $color == "light" ]]; then
+                    to_light
+                elif [[ $color == "dark" ]]; then
+                    to_dark
+                fi
+                on_change
             fi
-            on_change
-        fi
-    done
+        done
+}
+
+main

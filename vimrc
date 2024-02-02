@@ -28,8 +28,6 @@ set wildchar=<Tab> wildmenu wildmode=full
 
 set formatoptions+=mM
 
-packadd! matchit
-
 ""
 "For Emacs-style editing on the command-line: >
 ""
@@ -67,6 +65,7 @@ let g:ale_linters = {'verilog' : ['verilator'],
 \ 'haskell' : ['hls'], 'rust': ['analyzer'],
 \ 'systemverilog' : ['verilator']}
 let g:ale_haskell_hls_executable = '/usr/bin/haskell-language-server'
+let g:ale_linter_aliases = {"PKGBUILD": ['sh']}
 ""
 " Verilog
 ""
@@ -85,6 +84,11 @@ let g:ale_c_clangtidy_checks = ['*', '-altera*', '-llvmlibc*']
 "Python
 ""
 let g:formatters_python = ['black']
+
+""
+" PKGBUILD (pacman-contrib)
+""
+let g:formatters_PKGBUILD = ['shfmt']
 
 ""
 " Themes and plugins 

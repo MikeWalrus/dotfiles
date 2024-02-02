@@ -1,3 +1,2 @@
-timeout 120 'notify-send -p -t 60000 "Suspend" "in 60 seconds" > /tmp/suspend-notification-id' resume 'makoctl dismiss -n $(</tmp/suspend-notification-id)'
+timeout 120 'idle_timeout_notify.zsh notify 60' resume 'idle_timeout_notify.zsh cancel'
 timeout 180 'systemctl suspend'
-before-sleep 'swaylock-my'

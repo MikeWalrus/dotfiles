@@ -1,0 +1,22 @@
+
+OPTIONS=pickup_burden:unencumbered
+
+# Note: pickup_types is only consulted if no EXCEPTION matches.
+OPTIONS=pickup_types:$?!/(
+
+# Always pick these:
+AUTOPICKUP_EXCEPTION="<magic lamp"
+AUTOPICKUP_EXCEPTION="<wand of wishing"
+AUTOPICKUP_EXCEPTION="<wand of death"
+AUTOPICKUP_EXCEPTION="<wand of polymorph"
+# Don't pick these:
+AUTOPICKUP_EXCEPTION=">worthless piece of"
+AUTOPICKUP_EXCEPTION=">load stone"
+AUTOPICKUP_EXCEPTION=">flint stone"
+
+OPTIONS=windowtype:curses
+OPTIONS=guicolor
+OPTIONS=showexp
+OPTIONS=align_message:bottom,align_status:right
+OPTIONS=time
+OPTIONS=perm_invent

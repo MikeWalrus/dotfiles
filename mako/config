@@ -13,7 +13,10 @@ default-timeout=10000
 icon-path=/usr/share/icons/Adwaita:/usr/share/icons/palenight
 
 [mode=dnd]
-# invisible=1
+invisible=1
+
+[summary~="Notification (on|paused)"]
+invisible=0
 
 [summary=Suspend]
 invisible=0

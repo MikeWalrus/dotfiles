@@ -1,12 +1,12 @@
 export GPG_TTY=$(tty)
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=/usr/bin:"$PATH"
-export PATH=/usr/local/bin:"$PATH"
-export PATH=/usr/bin/vendor_perl:"$PATH"
-export PATH="$HOME"/.local/bin:"$PATH"
-export PATH="$HOME"/.ghcup/bin:"$PATH"
-# export PATH="$HOME"/tmp/pure-ftpd/sbin:"$PATH"
+
+typeset -U path
+path=(
+    ~/.local/bin
+    ~/.ghcup/bin
+    /usr/bin/vendor_perl
+    $path
+)
 
 HISTFILE=~/.zsh_history
 HISTSIZE=10000000
@@ -14,6 +14,8 @@ SAVEHIST=10000000
 setopt INC_APPEND_HISTORY
 
 setopt autopushd
+
+setopt HIST_VERIFY
 
 autoload -U colors && colors
 PS1="%B%{$fg[red]%}%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%(?..[%?] )%{$fg[red]%}%{$reset_color%}$%b "
@@ -69,19 +71,14 @@ export QT_QPA_PLATFORMTHEME=qt5ct
 export EDITOR=vim
 export TERMINAL=alacritty
 export MANPAGER='nvim +Man!'
-# export MANPATH="/usr/local/man:$MANPATH"
 
 alias ls="ls --color=auto"
 
 alias auth='chromium --no-proxy-server'
 alias zathura="zathura --fork"
 alias za=zathura\ -c\ ~/.config/zathura/translusent
-alias syssus="systemctl suspend"
 alias vimwiki="vim -c ':VimwikiIndex'"
 alias lf=lfub
-
-source /etc/profile.d/lfcd.sh
-#alias code="prime-run code"
 
 countdown(){
     date1=$((`date +%s` + $1));
@@ -92,6 +89,7 @@ countdown(){
         sleep 0.1
     done
 }
+
 stopwatch(){
     date1=`date +%s`;
     while true; do
@@ -110,13 +108,7 @@ screencast(){
 	"$HOME/video-$(date '+%y%m%d-%H%M-%S').mkv"
 }
 
-# source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.zsh
-# Disable the cursor style feature
-# ZVM_CURSOR_STYLE_ENABLED=false
-
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 set -o emacs
@@ -131,16 +123,17 @@ bindkey "^[[B" down-line-or-beginning-search # Down
 bindkey '^[[3~' delete-char
 
 source /usr/share/fzf/completion.zsh
+source /etc/profile.d/lfcd.sh
 
 if [[ -e ~/reminder ]]; then
     source ~/reminder
 fi
 
-export XDG_DATA_HOME="$HOME/.local/share"
-export XDG_CACHE_HOME="$HOME/.cache"
-export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_STATE_HOME="$HOME/.local/state"
+export XDG_DATA_HOME=$HOME/.local/share
+export XDG_CACHE_HOME=$HOME/.cache
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_STATE_HOME=$HOME/.local/state
 
-export GOPATH="$XDG_DATA_HOME"/go
-export GOMODCACHE="$XDG_CACHE_HOME"/go/mod
+export GOPATH=$XDG_DATA_HOME/go
+export GOMODCACHE=$XDG_CACHE_HOME/go/mod
 

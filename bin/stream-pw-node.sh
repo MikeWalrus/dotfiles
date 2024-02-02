@@ -1,3 +1,28 @@
 #! /usr/bin/bash
 
-GST_DEBUG=3 gst-launch-1.0 pipewiresrc path="$1" ! videoconvert ! autovideosink
+main() {
+    declare pw_node="$1"
+    declare cmd="$2"
+
+    declare -a args
+
+    if [[ -z $cmd ]]; then
+        cmd=mirror
+        echo "Defaulting to mirror"
+    fi
+
+    if [[ $cmd == mirror ]]; then
+        args=( autovideosink )
+    elif [[ $cmd == record ]]; then
+        declare filepath="$3"
+        if [[ -z $filepath ]]; then
+            filepath=$(xdg-user-dir VIDEOS)/$(date --iso-8601=seconds).mp4
+        fi
+        args=( vaapih265enc ! mp4mux ! filesink location="$filepath" )
+    fi
+    set -x
+    gst-launch-1.0 -e pipewiresrc path="$pw_node" ! videoconvert ! "${args[@]}"
+    set +x
+}
+
+main "$@"

@@ -1,6 +1,6 @@
 {
-  "binutils": "2.41",
-  "doxygen": "1.9.8",
+  "binutils": "2.42",
+  "doxygen": "1.10.0",
   "dynamorio": "10.0.0",
   "find-cursor": "1.8",
   "gcc": "13.2",
