@@ -9,6 +9,7 @@ birdtray
 blas-mkl
 boomer-git
 brave-bin
+brillo
 btdu
 cellwriter
 chatbot-ui-git
@@ -17,11 +18,12 @@ clash-premium-bin
 cloudflare-warp-bin
 cloudflare-wrangler2
 colorpicker
+ddcci-driver-linux-dkms
 debtap
 docx-you-want
 dotbot
 drawio-desktop-bin
-dynamorio
+dynamorio-my-git
 edid-decode-git
 emote
 external-editor-revived-git
@@ -44,16 +46,20 @@ hdrmerge
 hotspot
 howdy-beta-git
 hw-probe
+hyprcursor-git
 hyprevents-git
 hyprland-autoname-workspaces-git
 hyprland-my-git
 hyprland-scratchpad-git
+hyprlang-git
+hyprpaper-git
 hyprpicker
 hyprprop-git
 i3lock-color
 i3wsr
 ianny-git
 icu66
+include-what-you-use
 jwasm
 kddockwidgets
 kmscon
@@ -70,7 +76,7 @@ libusbmuxd-git
 libwm-git
 lightly-git
 linux-enable-ir-emitter
-linuxqq
+linuxqq-nt-bwrap
 localsend-bin
 logisim
 logisim-evolution
@@ -85,7 +91,7 @@ musializer-git
 mysqltuner
 nautilus-open-any-terminal
 notify-send-py
-nwg-displays
+nwg-displays-my-git
 ocrmypdf
 onedrive-abraunegg
 opentabletdriver-git
@@ -103,7 +109,6 @@ pdsh
 perl-log-dispatch
 perl-time-out
 plots
-postman-bin
 pspp
 python-dlib
 python-face_recognition
@@ -118,6 +123,7 @@ python-pypi2pkgbuild
 python-types-requests
 python-word-beam-search-git
 python-xdg-base-dirs
+qt6ct-xdg-colorscheme-git
 rars
 ripdrag-git
 ripgrep-all-git
@@ -130,6 +136,7 @@ sc-im
 sing-box
 sioyek-appimage
 skippy-xd-git
+snapd-xdg-open-git
 spread-sheet-widget
 surf
 svgo
@@ -138,10 +145,12 @@ swayidle-git
 swaylock-git
 sxlock-git
 sxmo-dmenu
+syllazh
 systemd-bt-sleep
 systemd-lock-handler
 tla-toolbox
 tla-tools
+ttf-bookerly
 ttf-pingfang-git
 ttf-twemoji
 ttymidi
@@ -169,6 +178,7 @@ vim-zoom
 visual-studio-code-bin
 volctl
 wakapi-bin
+waybar-git
 waybar-git-debug
 wayfire-im-git
 wayland-debug-cli-git
@@ -179,6 +189,7 @@ wlr-randr
 wlsunset-git
 wmutils-git
 wshowkeys-git
+xdg-desktop-portal-hyprland-git
 xdg-ninja
 xdpss-git
 xinput-gui

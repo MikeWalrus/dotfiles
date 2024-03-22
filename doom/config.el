@@ -12,27 +12,22 @@
 (setq ispell-dictionary "en")
 
 (use-package! websocket
-    :after org-roam)
+  :after org-roam)
 
 (use-package! org-roam-ui
-    :after org-roam ;; or :after org
-;;         normally we'd recommend hooking orui after org-roam, but since org-roam does not have
-;;         a hookable mode anymore, you're advised to pick something yourself
-;;         if you don't care about startup time, use
-;;  :hook (after-init . org-roam-ui-mode)
-    :config
-    (setq org-roam-ui-sync-theme t
-          org-roam-ui-follow t
-          org-roam-ui-update-on-save t
-          org-roam-ui-open-on-start t))
+  :after org-roam ;; or :after org
+  ;;         normally we'd recommend hooking orui after org-roam, but since org-roam does not have
+  ;;         a hookable mode anymore, you're advised to pick something yourself
+  ;;         if you don't care about startup time, use
+  ;;  :hook (after-init . org-roam-ui-mode)
+  :config
+  (setq org-roam-ui-sync-theme t
+        org-roam-ui-follow t
+        org-roam-ui-update-on-save t
+        org-roam-ui-open-on-start t))
 
 (after! org
   (setq org-directory "~/docs/org/"
-        org-attach-id-dir "~/docs/org/attach/"
-        org-cite-global-bibliography '("~/docs/org/ref.bib")
-        org-agenda-files '("~/docs/org/agenda/" "~/docs/org/")
-        org-roam-directory (file-truename "~/docs/org/roam")
-        org-default-notes-file (expand-file-name "notes.org" org-directory)
         org-ellipsis " ▼ "
         org-superstar-headline-bullets-list '("◉" "●" "○" "◆" "●" "○" "◆")
         org-superstar-item-bullet-alist '((?+ . ?➤) (?- . ?✦)) ; changes +/- symbols in item lists
@@ -48,11 +43,19 @@
            "DONE(d)"
            "CANCELLED(c)"))
         )
+  ;; (let ((default-directory org-directory))
+  ;;   (setq
+  ;;    org-attach-id-dir (expand-file-name "attach/")
+  ;;    org-cite-global-bibliography (mapcar #'expand-file-name '("ref.bib"))
+  ;;    org-agenda-files (mapcar #'expand-file-name '("agenda/" "./"))
+  ;;    org-roam-directory (expand-file-name "roam")
+  ;;    org-default-notes-file (expand-file-name "notes.org")
+  ;;    ))
   )
 (after! org
   (add-to-list 'org-file-apps
-     '("\\.pdf\\'" . "zathura \"%s\""))
-)
+               '("\\.pdf\\'" . "zathura \"%s\""))
+  )
 
 (after! ox-latex
   (setq org-latex-listings 'minted)
@@ -79,12 +82,12 @@
 (setq company-idle-delay 0)
 
 (custom-set-faces
-  '(org-level-1 ((t (:inherit outline-1 :height 1.4))))
-  '(org-level-2 ((t (:inherit outline-2 :height 1.3))))
-  '(org-level-3 ((t (:inherit outline-3 :height 1.2))))
-  '(org-level-4 ((t (:inherit outline-4 :height 1.1))))
-  '(org-level-5 ((t (:inherit outline-5 :height 1.0))))
-)
+ '(org-level-1 ((t (:inherit outline-1 :height 1.4))))
+ '(org-level-2 ((t (:inherit outline-2 :height 1.3))))
+ '(org-level-3 ((t (:inherit outline-3 :height 1.2))))
+ '(org-level-4 ((t (:inherit outline-4 :height 1.1))))
+ '(org-level-5 ((t (:inherit outline-5 :height 1.0))))
+ )
 
 (setq lsp-rust-server 'rust-analyzer)
 
@@ -94,21 +97,21 @@
       "/usr/share/languagetool:/usr/share/java/languagetool/*")
 
 (add-to-list 'auto-mode-alist
-                 '("\\.v\\'" . verilog-mode))
+             '("\\.v\\'" . verilog-mode))
 
 ;; Verilog mode disable auto formatting
 (defun my-verilog-hook ()
-    (setq indent-tabs-mode nil)
-    (setq tab-width 4)
-    (setq verilog-indent-level 4)
-    (setq verilog-indent-level-behavioral 4)
-    (setq verilog-indent-level-declaration 4)
-    (setq verilog-indent-level-directive 4)
-    (setq verilog-indent-level-module 4)
-    (define-key verilog-mode-map (kbd ";") 'self-insert-command)
-    (define-key verilog-mode-map (kbd ":") 'self-insert-command)
-    (define-key verilog-mode-map (kbd "RET") 'evil-ret-and-indent)
-    (define-key verilog-mode-map (kbd "TAB") 'tab-to-tab-stop))
+  (setq indent-tabs-mode nil)
+  (setq tab-width 4)
+  (setq verilog-indent-level 4)
+  (setq verilog-indent-level-behavioral 4)
+  (setq verilog-indent-level-declaration 4)
+  (setq verilog-indent-level-directive 4)
+  (setq verilog-indent-level-module 4)
+  (define-key verilog-mode-map (kbd ";") 'self-insert-command)
+  (define-key verilog-mode-map (kbd ":") 'self-insert-command)
+  (define-key verilog-mode-map (kbd "RET") 'evil-ret-and-indent)
+  (define-key verilog-mode-map (kbd "TAB") 'tab-to-tab-stop))
 (add-hook 'verilog-mode-hook 'my-verilog-hook)
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
@@ -164,5 +167,10 @@
 (after! doom-themes
   ;; set  your favorite themes
   (setq! auto-dark-dark-theme 'doom-palenight
-        auto-dark-light-theme 'leuven)
+         auto-dark-light-theme 'leuven)
   (auto-dark-mode 1))
+
+;; (after!
+;;   (let ((default-directory org-directory))
+;;     (setq rmh-elfeed-org-files (mapcar #'expand-file-name '("elfeed.org")))
+;;     ))

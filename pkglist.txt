@@ -54,6 +54,7 @@ bpytop
 brave-bin
 breeze
 brightnessctl
+brillo
 bsd-games
 btdu
 btop
@@ -98,6 +99,7 @@ d-spy
 darkhttpd
 darktable
 dash
+ddcci-driver-linux-dkms
 debian-archive-keyring
 debootstrap
 debtap
@@ -118,8 +120,7 @@ drawio-desktop-bin
 dtools
 dub
 dvtm
-dynamorio
-dynamorio-git
+dynamorio-my-git
 ed
 edk2-shell
 efibootmgr
@@ -172,6 +173,7 @@ ghc
 ghcup-hs-bin
 gickup
 gimp-devel
+girara
 git
 git-filter-repo
 github-cli
@@ -224,7 +226,7 @@ hw-probe
 hyprland-autoname-workspaces-git
 hyprland-my-git
 hyprland-scratchpad-git
-hyprpaper
+hyprpaper-git
 hyprpicker
 hyprprop-git
 i3-wm
@@ -238,6 +240,7 @@ icu66
 id3v2
 ifuse
 imv
+include-what-you-use
 inetutils
 inkscape
 inotify-tools
@@ -287,7 +290,7 @@ linux
 linux-enable-ir-emitter
 linux-firmware
 linux-headers
-linuxqq
+linuxqq-nt-bwrap
 lldb
 localsend-bin
 logisim
@@ -346,7 +349,7 @@ nsxiv
 ntfs-3g
 nvchecker
 nvme-cli
-nwg-displays
+nwg-displays-my-git
 nwg-look
 nyx
 obs-studio
@@ -403,7 +406,6 @@ plots
 pnpm
 polkit-gnome
 polyphone
-postman-bin
 powertop
 proxychains-ng
 pspp
@@ -452,6 +454,8 @@ qemu-desktop
 qemu-emulators-full
 qsynth
 qt5ct
+qt6ct-my-git-debug
+qt6ct-xdg-colorscheme-git
 radare2
 ranger
 rars
@@ -510,6 +514,7 @@ swaylock-git
 sxiv
 sxlock-git
 sxmo-dmenu
+syllazh
 syslinux
 systemd-bt-sleep
 systemd-lock-handler
@@ -552,6 +557,7 @@ torbrowser-launcher
 traceroute
 trayer
 tree
+ttf-bookerly
 ttf-dejavu
 ttf-font-awesome
 ttf-jetbrains-mono
@@ -571,6 +577,7 @@ units
 unoconv
 unrar
 unzip
+urlwatch
 uxplay
 v4l2loopback-dkms
 vala
@@ -610,7 +617,7 @@ vulkan-intel
 w3m
 wakapi-bin
 wakatime
-waybar
+waybar-git
 waybar-git-debug
 wayfire-im-git
 wayland-debug-cli-git
@@ -639,7 +646,7 @@ wqy-microhei
 wshowkeys-git
 xclip
 xdg-desktop-portal-gtk
-xdg-desktop-portal-hyprland
+xdg-desktop-portal-hyprland-git
 xdg-ninja
 xdg-user-dirs
 xdg-utils
