@@ -22,6 +22,7 @@ autocmd FileType kconfig setlocal noexpandtab
 autocmd FileType c setlocal noexpandtab tabstop=8 shiftwidth=8
 autocmd FileType kconfig setlocal noexpandtab tabstop=8 shiftwidth=8
 autocmd BufRead,BufNewFile *.h,*.c set filetype=c
+autocmd FileType gitcommit setlocal spell
 
 set wildoptions=fuzzy,pum
 set wildchar=<Tab> wildmenu wildmode=full

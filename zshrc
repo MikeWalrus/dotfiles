@@ -18,7 +18,15 @@ setopt autopushd
 setopt HIST_VERIFY
 
 autoload -U colors && colors
-PS1="%B%{$fg[red]%}%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%(?..[%?] )%{$fg[red]%}%{$reset_color%}$%b "
+PS1="%B"\
+"%{$fg[yellow]%}%n"\
+"%{$fg[green]%}@%"\
+"{$fg[blue]%}%M "\
+"%{$fg[magenta]%}"\
+$'%{\e]8;;file://%M%d\e\\%}%~%{\e]8;;\e\\%}'\
+"%{$fg[red]%}%(?.. [%?] )"\
+"%{$reset_color%}$"\
+"%b "
 
 source /usr/share/zsh/plugins/zsh-z/zsh-z.plugin.zsh
 
@@ -72,7 +80,7 @@ export EDITOR=vim
 export TERMINAL=alacritty
 export MANPAGER='nvim +Man!'
 
-alias ls="ls --color=auto"
+alias ls="ls --color=auto --hyperlink=auto"
 
 alias auth='chromium --no-proxy-server'
 alias zathura="zathura --fork"
@@ -99,13 +107,8 @@ stopwatch(){
     done
 }
 
-screencast(){
-    ffmpeg \
-	-f x11grab \
-	-s "$(xdpyinfo | awk '/dimensions/ {print $2;}')" \
-	-i "$DISPLAY" \
- 	-c:v libx264 -qp 0 -r 30 \
-	"$HOME/video-$(date '+%y%m%d-%H%M-%S').mkv"
+copy_pwd() {
+    wl-copy $PWD
 }
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh

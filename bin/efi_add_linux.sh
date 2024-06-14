@@ -5,9 +5,10 @@ kernel_params=(
     loglevel=3
     i8042.dumbkbd
     nowatchdog
-    'initrd=\intel-ucode.img'
     'initrd=\initramfs-linux.img'
 )
+# 'initrd=\intel-ucode.img' This is not needed anymore.
+# See https://archlinux.org/news/mkinitcpio-hook-migration-and-early-microcode/
 
 efibootmgr --create \
     --disk /dev/nvme0n1 \

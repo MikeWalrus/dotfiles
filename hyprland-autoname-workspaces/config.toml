@@ -1,55 +1,54 @@
-version = "1.1.12"
+version = "1.1.13"
 
 [class]
-Zotero = "Z"
-thunderbird = ""
-"org.gnome.Contacts" = ""
-Gvim = "🇻"
-Anki = "📇"
 QQ = ""
-Alacritty = ""
-"[Ff]irefox" = ""
-"org.telegram.desktop" = ""
-code-url-handler = "code"
-"(?i)waydroid.*" = "droid"
-TelegramDesktop = "✈️"
 libreoffice-writer = ""
-Brave-browser = "🌍"
-"org.gnome.Nautilus" = ""
 "com.github.xournalpp.xournalpp" = ""
-"(?i)Kitty" = "term"
 DEFAULT = "{class}"
-Sxiv = "🖼️"
 GoldenDict = "📙"
-"org.pwmt.zathura" = ""
+Gvim = "🇻"
+TelegramDesktop = "✈️"
+"[Ff]irefox" = ""
+"org.gnome.Nautilus" = ""
+"(?i)waydroid.*" = "droid"
+"org.gnome.Contacts" = ""
+Anki = "📇"
 emacs = "😈"
+"(?i)Kitty" = "term"
+Sxiv = "🖼️"
+Zotero = "Z"
+"org.pwmt.zathura" = ""
+thunderbird = ""
+Brave-browser = "🌍"
+Alacritty = ""
+"org.telegram.desktop" = ""
 
 [class_active]
-"(?i)ExampleOneTerm" = "<span foreground='red'>{icon}</span>"
-DEFAULT = "*{icon}*"
+# "(?i)ExampleOneTerm" = "<span foreground='red'>{icon}</span>"
+# DEFAULT = "*{icon}*"
 
 [initial_class]
 
 [initial_class_active]
 
 [workspaces_name]
-10 = "ten"
+4 = "four"
 5 = "five"
 6 = "six"
+2 = "two"
+10 = "ten"
 0 = "zero"
-4 = "four"
 1 = "one"
 7 = "seven"
-2 = "two"
 3 = "three"
 8 = "eight"
 9 = "nine"
 
-[title_in_class."(?i)kitty"]
-"(?i)neomutt" = "neomutt"
-
 [title_in_class.firefox]
 ".*Apple Music.*" = ""
+
+[title_in_class."(?i)kitty"]
+"(?i)neomutt" = "neomutt"
 
 [title_in_class_active."(?i)firefox"]
 "(?i)twitch" = "<span color='purple'>{icon}</span>"
@@ -67,11 +66,11 @@ DEFAULT = "*{icon}*"
 [initial_title_in_initial_class_active]
 
 [exclude]
-"[Ss]team" = "^(Friends List.*)?$"
 "ueberzugpp*" = ""
 aProgram = "^$"
-"(?i)fcitx" = ".*"
 "" = "^$"
+"(?i)fcitx" = ".*"
+"[Ss]team" = "^(Friends List.*)?$"
 "(?i)TestApp" = ""
 
 [format]
@@ -82,7 +81,7 @@ workspace = "<span color='#C3E88D'>{id}:</span>{delim}{clients}"
 workspace_empty = "{id}"
 client = "{icon}"
 client_fullscreen = "[{icon}]"
-client_active = "*{icon}*"
+client_active = "<span color='#C3E88D'>{icon}</span>"
 client_dup = "{icon}{counter_sup}"
 client_dup_active = "*{icon}*{delim}{icon}{counter_unfocused_sup}"
 client_dup_fullscreen = "[{icon}]{delim}{icon}{counter_unfocused_sup}"

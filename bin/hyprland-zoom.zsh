@@ -5,7 +5,7 @@ if [[ -z $1 ]]; then
     exit
 fi
 
-zoom_option=misc:cursor_zoom_factor
+zoom_option=cursor:zoom_factor
 
 current_zoom_level=$(hyprctl getoption "$zoom_option" |
     awk '/float/ {print $2}')

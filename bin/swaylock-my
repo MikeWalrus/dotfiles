@@ -9,17 +9,18 @@ main() {
         images_args+=(-i "$monitor":"$(rand_image.sh)")
     done
 
-    local modes=$(makoctl mode)
+    local modes
+    modes=$(makoctl mode)
     local was_dnd
-    if [[ "$mode" == *"dnd"* ]]; then
+    if [[ "$modes" == *"dnd"* ]]; then
         was_dnd=true
     else
         was_dnd=false
         makoctl mode -a dnd
     fi
     swaylock --ready-fd="$ready_fd" "${images_args[@]}"
-    if [[ "$was_dnd" = true ]]; then
-        makoctl mode -r dnd
+    if [[ "$was_dnd" = false ]]; then
+        mako-toggle
     fi
 }
 

@@ -1,0 +1,139 @@
+use std::fmt;
+use std::fs;
+use std::io::{self, BufRead, Write};
+
+fn get_load() -> f32 {
+    let load_string = fs::read_to_string("/proc/loadavg").unwrap();
+    let mut split = load_string.split(' ');
+    let load1 = split.next().unwrap();
+    load1.parse().unwrap()
+}
+
+struct CpuInfo {
+    idle: u64,
+    total: u64,
+}
+
+fn get_cpu_time() -> CpuInfo {
+    let f = fs::File::open("/proc/stat").unwrap();
+    let mut f = io::BufReader::new(f);
+    let mut line = String::new();
+    f.read_line(&mut line).unwrap();
+    let numbers: Vec<u64> = line
+        .split_ascii_whitespace()
+        .skip(1) // cpu
+        .map(|i| i.parse().unwrap())
+        .collect();
+    CpuInfo {
+        idle: numbers[3] + numbers[4],
+        total: numbers.iter().sum(),
+    }
+}
+
+fn get_psi(which: &str) -> f32 {
+    let f = fs::File::open(format!("/proc/pressure/{which}")).unwrap();
+    let mut f = io::BufReader::new(f);
+    let mut line = String::new();
+    f.read_line(&mut line).unwrap();
+    line.split(' ')
+        .nth(1)
+        .unwrap()
+        .split('=')
+        .nth(1)
+        .unwrap()
+        .parse()
+        .unwrap()
+}
+
+struct Colored<T> {
+    value: T,
+    orange: T,
+    red: T,
+}
+
+impl<T: PartialOrd + fmt::Display> fmt::Display for Colored<T> {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        let w = f.width().unwrap_or(0);
+        let p = f.precision().unwrap_or(0);
+        if self.value > self.red {
+            write!(f, r##"<span color="#ff0000">{:w$.p$}</span>"##, self.value)
+        } else if self.value > self.orange {
+            write!(f, r##"<span color="#ffa500">{:w$.p$}</span>"##, self.value)
+        } else {
+            write!(f, r##"{:w$.p$}"##, self.value)
+        }
+    }
+}
+
+fn main() {
+    let mut old_cpuinfo = get_cpu_time();
+    let cpu_count = num_cpus::get() as f32;
+    let mut stdout = io::stdout().lock();
+    loop {
+        let cpuinfo = get_cpu_time();
+        let load = get_load();
+        let psi_cpu = get_psi("cpu");
+        let psi_mem = get_psi("memory");
+        let psi_io = get_psi("io");
+
+        let text = format!(
+            "{cpu:3}%",
+            cpu = Colored {
+                value: (1.0
+                    - (cpuinfo.idle - old_cpuinfo.idle) as f32
+                        / (cpuinfo.total - old_cpuinfo.total) as f32)
+                    * cpu_count
+                    * 100.0,
+                orange: 60.0 * cpu_count,
+                red: 90.0 * cpu_count,
+            },
+        );
+        let tooltip = format!(
+            "<tt>Load{load:5.2}\\nCPU{psi_cpu:4.1}\\nMem{psi_mem:4.1}\\nI/O{psi_io:4.1}</tt>",
+            load = Colored {
+                value: load,
+                orange: 0.5 * cpu_count,
+                red: 0.9 * cpu_count
+            },
+            psi_cpu = Colored {
+                value: psi_cpu,
+                orange: 1.0,
+                red: 5.0
+            },
+            psi_mem = Colored {
+                value: psi_mem,
+                orange: 1.0,
+                red: 5.0
+            },
+            psi_io = Colored {
+                value: psi_io,
+                orange: 20.0,
+                red: 90.0
+            },
+        );
+        let output = format!(
+            "{{\"text\": \"{}\", \"tooltip\": \"{}\", \"class\": \"\", \"percentage\": 0 }}\n",
+            text.replace('"', r#"\""#),
+            tooltip.replace('"', r#"\""#),
+        );
+        stdout.write_all(output.as_bytes()).unwrap();
+        stdout.flush().unwrap();
+
+        old_cpuinfo = cpuinfo;
+        wait_for_whole_seconds(5);
+    }
+}
+
+fn wait_for_whole_seconds(secs: u64) {
+    use std::thread::sleep;
+    use std::time::{Duration, SystemTime};
+
+    let dur = SystemTime::now()
+        .duration_since(SystemTime::UNIX_EPOCH)
+        .unwrap();
+    let mut to_wait = Duration::from_secs(1) - Duration::from_nanos(u64::from(dur.subsec_nanos()));
+    if secs > 1 {
+        to_wait += Duration::from_secs(secs - dur.as_secs() % secs)
+    }
+    sleep(to_wait);
+}

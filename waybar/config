@@ -7,7 +7,7 @@
                       // Choose the order of the modules
         "modules-left": ["hyprland/workspaces"],
         "modules-center": ["custom/media"],
-        "modules-right": ["custom/darkmode", "idle_inhibitor", "custom/aa", "pulseaudio", "network", "custom/netspeed", "custom/btrfs", "memory", "cpu", "temperature", "battery", "clock", "tray"],
+        "modules-right": ["systemd-failed-units", "custom/darkmode", "idle_inhibitor", "custom/aa", "pulseaudio", "network", "custom/netspeed", "custom/btrfs", "memory", "custom/cpu-psi", "temperature", "battery", "clock", "tray"],
         // Modules configuration
         // "sway/workspaces": {
         //     "disable-scroll": true,
@@ -157,6 +157,13 @@
             "on-click": "pavucontrol",
             "on-click-middle": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
         },
+        "systemd-failed-units": {
+            "hide-on-ok": true,
+            "format": "✗ {nr_failed_system}+{nr_failed_user}",
+            "format-ok": "✓",
+            "system": true,
+            "user": true,
+        },
         "custom/media": {
             "exec": "playerctl metadata -f '{{playerName}} {{lc(status)}} «{{title}} - {{artist}}»' -F",
             "on-click-middle": "playerctl play-pause",
@@ -181,13 +188,18 @@
         },
         "custom/aa": {
             "exec": "mako-dnd-waybar.sh",
-            "on-click": "mako-toggle",
+//            "on-click": "mako-toggle",
             "signal": 2
         },
         "custom/darkmode": {
             "exec": "color-scheme-waybar.sh",
             "on-click": "toggle-dark-mode.sh",
             "signal": 1
+        },
+        "custom/cpu-psi": {
+            "exec": "cpu-psi-waybar",
+            "return-type": "json",
+            "escape": false
         }
 }
 

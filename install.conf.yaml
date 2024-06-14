@@ -55,3 +55,4 @@
         path: systemd/user/*
     ~/.config/environment.d: environment.d
     ~/.nethackrc: nethackrc
+    ~/.config/mimeapps.list: mimeapps.list

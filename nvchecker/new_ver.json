@@ -1,12 +1,57 @@
 {
-  "binutils": "2.42",
-  "doxygen": "1.10.0",
-  "dynamorio": "10.0.0",
-  "find-cursor": "1.8",
-  "gcc": "13.2",
-  "goldendict": "1.5.0",
-  "sxmo-dmenu": "5.0.14",
-  "vim-fontsize": "0.5.0",
-  "vim-lumen": "1.0",
-  "vim-zoom": "0.3.4"
+  "version": 2,
+  "data": {
+    "binutils": {
+      "version": "2.42"
+    },
+    "doxygen": {
+      "version": "1.11.0",
+      "gitref": "refs/tags/Release_1_11_0",
+      "url": "https://github.com/doxygen/doxygen/releases/tag/Release_1_11_0"
+    },
+    "dynamorio": {
+      "version": "10.0.0",
+      "gitref": "refs/tags/release_10.0.0",
+      "revision": "fda62ccc8e41babe8081464f80fcfb2510825629",
+      "url": "https://github.com/DynamoRIO/dynamorio/releases/tag/release_10.0.0"
+    },
+    "find-cursor": {
+      "version": "1.8",
+      "gitref": "refs/tags/v1.8",
+      "revision": "a78c7164757f211f44f939cf5c784e1f40f20b05",
+      "url": "https://github.com/arp242/find-cursor/releases/tag/v1.8"
+    },
+    "gcc": {
+      "version": "14.1"
+    },
+    "goldendict": {
+      "version": "1.5.0",
+      "gitref": "refs/tags/1.5.0",
+      "revision": "095eca5d545de7adf896fab604437987f9c78fdd",
+      "url": "https://github.com/goldendict/goldendict/releases/tag/1.5.0"
+    },
+    "sxmo-dmenu": {
+      "version": "5.0.14",
+      "gitref": "refs/tags/5.0.14",
+      "revision": "623f3c85268d243f3bcd618ad041a501dd2ce9bd"
+    },
+    "vim-fontsize": {
+      "version": "0.5.0",
+      "gitref": "refs/tags/v0.5.0",
+      "revision": "b9612d78887d72f685a78901875aa0bb181fa20d",
+      "url": "https://github.com/drmikehenry/vim-fontsize/releases/tag/v0.5.0"
+    },
+    "vim-lumen": {
+      "version": "1.0",
+      "gitref": "refs/tags/v1.0",
+      "revision": "1c100090ff567bb4a4d14ca1b7518d5f8e69c451",
+      "url": "https://github.com/vimpostor/vim-lumen/releases/tag/v1.0"
+    },
+    "vim-zoom": {
+      "version": "0.3.4",
+      "gitref": "refs/tags/v0.3.4",
+      "revision": "fc446a24d3fee7f81fc7c06a80e5d9d269a8fde6",
+      "url": "https://github.com/dhruvasagar/vim-zoom/releases/tag/v0.3.4"
+    }
+  }
 }

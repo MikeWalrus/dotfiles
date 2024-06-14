@@ -40,8 +40,8 @@ font pango:JetBrains Mono regular 6
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- \
-    i3lock -c 00000000 --nofork
+# exec --no-startup-id xss-lock --transfer-sleep-lock -- \
+#    i3lock -c 00000000 --nofork
 
 bindsym $mod+Mod1+l exec loginctl lock-session
 
@@ -50,7 +50,7 @@ bindsym $mod+Mod1+l exec loginctl lock-session
 # exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
-set $refresh_i3status killall -SIGUSR1 i3status
+# set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
@@ -72,7 +72,7 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec "dmenu_run -nf '#BBBBBB' -nb '#292D3E' -sb '#7193DD' -sf '#FFFFFF' -fn 'monospace-10' -p 'open:'"
+bindsym $mod+d exec "rofi -show combi -modes combi -combi-modes window,drun,run"
 bindsym $mod+comma exec "rofi -show window"
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
@@ -215,29 +215,27 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-# i3bar_command i3bar --transparency
-  status_command i3status
-  colors {
-    background #00001150
-    statusline #FFFFFFFF
-    separator  #00000000
-
-    focused_workspace  #A9B5FF70 #939EDE30 #FFFFFFFF
-    active_workspace   #33333370 #22222230 #FFFFFF80
-    inactive_workspace #33333370 #22222230 #CCCCCC80
-    urgent_workspace   #2F343A #F07178 #FFFFFF
-    binding_mode       #2F343A #F07178 #FFFFFF
-  }
-  # tray_padding 0
-  # tray_output primary
-}
+# bar {
+# # i3bar_command i3bar --transparency
+#   status_command i3status
+#   colors {
+#     background #00001150
+#     statusline #FFFFFFFF
+#     separator  #00000000
+# 
+#     focused_workspace  #A9B5FF70 #939EDE30 #FFFFFFFF
+#     active_workspace   #33333370 #22222230 #FFFFFF80
+#     inactive_workspace #33333370 #22222230 #CCCCCC80
+#     urgent_workspace   #2F343A #F07178 #FFFFFF
+#     binding_mode       #2F343A #F07178 #FFFFFF
+#   }
+#   # tray_padding 0
+#   # tray_output primary
+# }
 
 exec --no-startup-id picom -b
 
-exec --no-startup-id "alacritty -e tmux new-session clash \; split-window \; select-layout even-horizontal"
-
-exec --no-startup-id dunst
+# exec --no-startup-id mako
 
 exec_always --no-startup-id ~/.local/bin/i3wsr
 
@@ -247,7 +245,7 @@ exec --no-startup-id redshift
 bindsym $mod+Shift+v exec "alacritty -e pacmixer"
 
 # Key binding for the browser
-bindsym $mod+b exec "brave --force-device-scale-factor=1.4"
+bindsym $mod+b exec "firefox"
 
 # goldendict
 bindsym $mod+g exec "goldendict"

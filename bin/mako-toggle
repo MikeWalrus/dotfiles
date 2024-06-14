@@ -1,7 +1,6 @@
 #! /usr/bin/bash
 
 mode=$(makoctl mode)
-pkill --signal=RTMIN+2 waybar
 
 if [[ "${mode}" == *"dnd"* ]]; then
     notify-send --icon=call-start "Notification on"
@@ -11,4 +10,4 @@ else
     makoctl mode -a dnd
 fi
 
-pkill --signal=RTMIN+2 waybar
+pkill --exact --signal=RTMIN+2 waybar

@@ -18,11 +18,7 @@ to_light() {
 }
 
 on_change() {
-    pkill --signal=RTMIN+1 waybar
-}
-
-connect_wayland_socket() {
-    socat - UNIX-CONNECT:"$XDG_RUNTIME_DIR/$WAYLAND_DISPLAY" >/dev/null
+    pkill --exact --signal=RTMIN+1 waybar
 }
 
 main() {

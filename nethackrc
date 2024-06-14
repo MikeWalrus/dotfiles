@@ -20,3 +20,4 @@ OPTIONS=showexp
 OPTIONS=align_message:bottom,align_status:right
 OPTIONS=time
 OPTIONS=perm_invent
+OPTIONS=hitpointbar

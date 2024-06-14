@@ -1,12 +1,37 @@
 {
-  "binutils": "2.41",
-  "doxygen": "1.10.0",
-  "dynamorio": "10.0.0",
-  "find-cursor": "1.8",
-  "gcc": "13.2",
-  "goldendict": "1.5.0",
-  "sxmo-dmenu": "5.0.14",
-  "vim-fontsize": "0.5.0",
-  "vim-lumen": "1.0",
-  "vim-zoom": "0.3.4"
+  "version": 2,
+  "data": {
+    "binutils": {
+      "version": "2.42"
+    },
+    "doxygen": {
+      "version": "1.11.0",
+      "gitref": "refs/tags/Release_1_11_0",
+      "url": "https://github.com/doxygen/doxygen/releases/tag/Release_1_11_0"
+    },
+    "dynamorio": {
+      "version": "10.0.0"
+    },
+    "find-cursor": {
+      "version": "1.8"
+    },
+    "gcc": {
+      "version": "14.1"
+    },
+    "goldendict": {
+      "version": "1.5.0"
+    },
+    "sxmo-dmenu": {
+      "version": "5.0.14"
+    },
+    "vim-fontsize": {
+      "version": "0.5.0"
+    },
+    "vim-lumen": {
+      "version": "1.0"
+    },
+    "vim-zoom": {
+      "version": "0.3.4"
+    }
+  }
 }

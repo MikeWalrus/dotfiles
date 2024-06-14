@@ -1,6 +1,9 @@
 #! /usr/bin/bash
 
-feh --no-fehbg --bg-fill "$(rand_image.sh)"
+if [[ -z $WAYLAND_DISPLAY ]]; then
+    feh --no-fehbg --bg-fill "$(rand_image.sh)"
+    exit
+fi
 # swaymsg 'output "*" bg '$image' fill'
 
 set -e
