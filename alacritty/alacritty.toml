@@ -1,4 +1,3 @@
-working_directory = "/home/mike/"
 import = ["~/.config/alacritty/color.toml"]
 
 [colors.selection]
@@ -20,9 +19,10 @@ size = 18.0
 
 [window]
 decorations = "none"
+blur = true
 
 [[hints.enabled]]
-command = "wl-copy"
+command = "uri_copy"
 hyperlinks = true
 post_processing = true
 persist = false

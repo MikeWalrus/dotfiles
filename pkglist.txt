@@ -7,7 +7,7 @@ adobe-source-han-sans-cn-fonts
 adobe-source-han-sans-kr-fonts
 adobe-source-han-serif-cn-fonts
 adw-gtk3
-alacritty-git
+alacritty
 alsa-plugins
 alsa-utils
 altserver-bin
@@ -17,6 +17,7 @@ arc-gtk-theme
 arc-icon-theme
 arch-hs
 archlinux-wallpaper
+argparse
 aria2
 asar
 ascii-image-converter
@@ -36,6 +37,7 @@ bashtop
 bat
 bazel
 bc
+beancount
 bear
 bemenu
 bftpd
@@ -81,7 +83,6 @@ clinfo
 cloc
 cloud-utils
 cloudflare-warp-bin
-cloudflare-wrangler2
 cmatrix
 colorpicker
 compsize
@@ -140,7 +141,6 @@ expac
 external-editor-revived-git
 extra-cmake-modules
 extrace-git
-factorio-demo
 fakeroot
 farbfeld
 fbgrab
@@ -192,6 +192,7 @@ glmark2-git
 glow
 gnome-calendar
 gnome-clocks
+gnome-connections
 gnome-contacts
 gnome-disk-utility
 gnome-keyring
@@ -241,6 +242,8 @@ hyprland-scratchpad-git
 hyprpaper-my-git
 hyprpicker
 hyprprop-git
+hyprutils-git
+hyprwayland-scanner-git
 i3-wm
 i3blocks
 i3lock-color
@@ -252,7 +255,6 @@ icu66
 id3v2
 ifuse
 imv
-include-what-you-use
 inetutils
 inkscape
 inotify-tools
@@ -279,6 +281,7 @@ kmscon
 kooha
 koreader-bin
 krop
+kscreen
 kubo
 kylin-virtual-keyboard-git
 languagetool
@@ -336,9 +339,10 @@ libwaftp-dev
 libxklavier
 lightly-git
 linux
-linux-enable-ir-emitter
+linux-enable-ir-emitter-git
 linux-firmware
 linux-headers
+linux-lts
 linuxqq-nt-bwrap
 lldb
 localsend-bin
@@ -369,6 +373,7 @@ monero
 mono
 mono-msbuild
 moreutils
+mosh
 mpv
 mpv-mpris
 mtm-git
@@ -389,8 +394,10 @@ neovim-qt
 nethack
 network-manager-applet
 networkmanager
+networkmanager-openconnect
 newsboat
 nfs-utils
+nginx-mainline-mod-dav-ext
 nmap
 nodejs
 notify-send-py
@@ -412,6 +419,7 @@ onedrive-abraunegg
 openblas
 openbox
 openbsd-netcat
+openconnect
 openssh
 opentabletdriver-git
 orchis-theme
@@ -458,6 +466,9 @@ pipewire-docs
 pipewire-pulse
 pkgconf
 pkgstats
+plasma-desktop
+plasma-nm
+plasma-pa
 playerctl
 plots
 pnpm
@@ -473,6 +484,7 @@ pycharm-community-edition
 python-axolotl
 python-black
 python-build
+python-dlib-git
 python-editdistance
 python-flask-babel
 python-gdbgui
@@ -534,7 +546,6 @@ riscv32-elf-gdb
 rofi-lbonn-wayland-git
 rofi-themes-collection-git
 rr
-rust-analyzer
 rust-racer
 rustup
 s-tui
@@ -573,13 +584,11 @@ supertuxkart
 surf
 svgo
 sway-audio-idle-inhibit-git
-sway-git
 swaybg
 swayidle-git
 swaylock-git
 swaywsr-git
 sxiv
-sxlock-git
 sxmo-dmenu
 syllazh
 syslinux
@@ -641,6 +650,7 @@ ucblogo
 uclogic-tools
 ueberzugpp
 umbrello
+umoci
 unarchiver
 units
 unoconv
@@ -660,20 +670,31 @@ vim-airline
 vim-ale-git
 vim-arm-syntax-git
 vim-autoformat-git
+vim-beancount-git
+vim-coc-clangd-git
+vim-coc-git
+vim-coc-git-git
+vim-coc-json-git
+vim-coc-lists-git
+vim-coc-rust-analyzer-git
+vim-coc-sh-git
 vim-commentary
 vim-fontsize
 vim-fzf-git
 vim-gitgutter
+vim-localvimrc-git
 vim-lumen-git
 vim-palenight-git
 vim-papercolor-git
 vim-profiler
 vim-spell-en
+vim-surround
 vim-systemd
 vim-tabular
 vim-ultisnips
 vim-vimwiki
 vim-wayland-clipboard-git
+vim-youcompleteme-git
 vim-zoom
 vinagre
 virt-manager
@@ -713,6 +734,7 @@ wmfocus
 wmutils-git
 wofi
 wqy-microhei
+wrangler
 wshowkeys-git
 xclip
 xdg-desktop-portal-gtk
@@ -799,9 +821,11 @@ zerotier-one
 zip
 zoom
 zotero-bin
-zsh
 zsh-autosuggestions
 zsh-completions
+zsh-doc-my-git
 zsh-history-substring-search
+zsh-my-git
+zsh-my-git-debug
 zsh-syntax-highlighting
 zsh-z-git

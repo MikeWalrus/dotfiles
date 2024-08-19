@@ -3,7 +3,7 @@ background-color=#32374D70
 text-color=#F0F0F0
 border-size=0
 outer-margin=10
-margin=0,0
+margin=10,0
 padding=10
 font=sans-serif 16
 width=500
@@ -11,6 +11,7 @@ height=400
 layer=overlay
 default-timeout=10000
 icon-path=/usr/share/icons/Adwaita:/usr/share/icons/palenight
+border-radius=10
 
 [mode=dnd]
 invisible=1

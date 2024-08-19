@@ -87,8 +87,14 @@
         },
         "clock": {
             // "timezone": "America/New_York",
+            "timezones": ["Asia/Shanghai", "US/Central"],
             "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-            "format-alt": "{:%Y-%m-%d}"
+            "format": "{:%Z:%H:%M}",
+            "format-alt": "{:%Y-%m-%d}",
+            "actions": {
+                "on-scoll-up": "tz_up",
+                "on-scroll-down": "tz_down",
+            }
         },
         "cpu": {
             "format": "{usage}%",
@@ -188,7 +194,7 @@
         },
         "custom/aa": {
             "exec": "mako-dnd-waybar.sh",
-//            "on-click": "mako-toggle",
+            //            "on-click": "mako-toggle",
             "signal": 2
         },
         "custom/darkmode": {

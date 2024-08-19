@@ -50,6 +50,9 @@
   ;;    org-roam-directory (expand-file-name "roam")
   ;;    org-default-notes-file (expand-file-name "notes.org")
   ;;    ))
+  (setq org-mobile-directory "~/webdav/orgmobile/")
+  (setq org-mobile-files '("chengdu.org"))
+  (setq org-mobile-inbox-for-pull "~/.cache/org-mobile-inbox-for-pull.org")
   )
 (after! org
   (add-to-list 'org-file-apps

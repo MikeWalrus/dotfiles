@@ -1,0 +1,5 @@
+#! /usr/bin/bash
+
+s="$(try_path_from_url "$1")"
+notify-send "Copied" "$s (from: $1)"
+wl-copy "$s"

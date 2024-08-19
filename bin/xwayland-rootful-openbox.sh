@@ -1,5 +1,7 @@
 #!/usr/bin/bash
 
+__dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
 main() {
     local xwayland_display="$1"
     if [[ -z $xwayland_display ]]; then
@@ -20,7 +22,7 @@ main() {
     openbox &
     tint2 &
     picom &
-    xdpss-mirror.sh &
+    bash "$__dir"/xdpss-mirror.sh &
 }
 
 main "$@"
