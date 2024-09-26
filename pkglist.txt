@@ -37,6 +37,8 @@ bashtop
 bat
 bazel
 bc
+bcc
+bcc-tools
 beancount
 bear
 bemenu
@@ -52,6 +54,7 @@ bluez
 bluez-utils
 boomer-git
 boost
+bpftrace
 bpytop
 brave-bin
 breeze
@@ -114,6 +117,7 @@ dino
 discord
 dmg2img
 dns-over-https
+dnsmasq
 docx-you-want
 dos2unix
 dotbot-git
@@ -130,6 +134,7 @@ ed
 edk2-shell
 eepers-git
 efibootmgr
+elan-lean
 element-desktop
 emacs-wayland
 emote
@@ -229,7 +234,7 @@ hdrmerge
 helvum
 hexedit
 hoogle
-hotspot
+hostapd
 howdy-beta-git
 hplip
 htop
@@ -264,6 +269,7 @@ intel-media-driver
 intel-ucode
 intltool
 iperf3
+istyle-verilog-formatter-git
 iucode-tool
 iverilog
 j4-dmenu-desktop
@@ -343,7 +349,9 @@ linux-enable-ir-emitter-git
 linux-firmware
 linux-headers
 linux-lts
+linux-lts-headers
 linuxqq-nt-bwrap
+lld
 lldb
 localsend-bin
 logisim
@@ -366,7 +374,6 @@ mingw-w64-gcc
 minicom
 mipsel-elf-binutils
 mipsel-elf-gcc
-mlocate
 mlpolygen-git
 modelsim-intel-starter
 monero
@@ -407,7 +414,7 @@ ntfs-3g
 nvchecker
 nvm
 nvme-cli
-nwg-displays
+nwg-displays-my-git
 nwg-look
 nyx
 obs-studio
@@ -420,6 +427,7 @@ openblas
 openbox
 openbsd-netcat
 openconnect
+openprinting-ppds-postscript-ricoh-my
 openssh
 opentabletdriver-git
 orchis-theme
@@ -470,6 +478,7 @@ plasma-desktop
 plasma-nm
 plasma-pa
 playerctl
+plocate
 plots
 pnpm
 polkit-gnome
@@ -568,6 +577,7 @@ simh
 sing-box
 sioyek-appimage
 skippy-xd-git
+slack-electron
 slop
 smartmontools
 sof-firmware
@@ -579,6 +589,7 @@ sqlitebrowser
 stalonetray
 stk
 strace
+stress-ng
 sudo
 supertuxkart
 surf
@@ -592,6 +603,7 @@ sxiv
 sxmo-dmenu
 syllazh
 syslinux
+sysstat
 systemd-bt-sleep
 systemd-lock-handler
 tailscale
@@ -679,6 +691,7 @@ vim-coc-lists-git
 vim-coc-rust-analyzer-git
 vim-coc-sh-git
 vim-commentary
+vim-copilot-git
 vim-fontsize
 vim-fzf-git
 vim-gitgutter
@@ -801,7 +814,7 @@ xorg-xvinfo
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
-xournalpp
+xournalpp-git
 xournalpp-libadwaita-mockup-git
 xpub
 xray

@@ -58,9 +58,16 @@
   (add-to-list 'org-file-apps
                '("\\.pdf\\'" . "zathura \"%s\""))
   )
+(after! org
+  ;; active Babel languages
+  (org-babel-do-load-languages
+   'org-babel-load-languages
+   '((shell . t))))
 
 (after! ox-latex
   (setq org-latex-listings 'minted)
+  (setq org-latex-minted-options '(("breaklines" "true")
+                                   ("breakanywhere" "true")))
   )
 (require 'ox-latex)
 (add-to-list 'org-latex-packages-alist '("" "minted"))

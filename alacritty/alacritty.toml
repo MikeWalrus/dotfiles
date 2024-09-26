@@ -4,9 +4,6 @@ import = ["~/.config/alacritty/color.toml"]
 background = "CellForeground"
 text = "CellBackground"
 
-[cursor.style]
-shape = "Block"
-
 [env]
 TERM = "xterm-256color"
 

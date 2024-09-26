@@ -44,12 +44,12 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -v '^?' backward-delete-char
 
 # Proxys
-export all_proxy=http://127.0.0.1:7890
-export ALL_PROXY=http://127.0.0.1:7890
-export http_proxy=http://127.0.0.1:7890
-export https_proxy=http://127.0.0.1:7890
-export HTTP_PROXY=http://127.0.0.1:7890
-export HTTPS_PROXY=http://127.0.0.1:7890
+# export all_proxy=http://127.0.0.1:7890
+# export ALL_PROXY=http://127.0.0.1:7890
+# export http_proxy=http://127.0.0.1:7890
+# export https_proxy=http://127.0.0.1:7890
+# export HTTP_PROXY=http://127.0.0.1:7890
+# export HTTPS_PROXY=http://127.0.0.1:7890
 
 if [ "$TERM" = "linux" ]; then
     /bin/echo -e "

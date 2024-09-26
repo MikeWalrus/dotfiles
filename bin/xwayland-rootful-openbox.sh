@@ -9,6 +9,7 @@ main() {
     fi
 
     Xwayland -geometry 1024x768 "$xwayland_display" &
+    sleep 2
 
     unset WAYLAND_DISPLAY
     export DISPLAY="$xwayland_display"
@@ -22,7 +23,7 @@ main() {
     openbox &
     tint2 &
     picom &
-    bash "$__dir"/xdpss-mirror.sh &
+    # bash "$__dir"/xdpss-mirror.sh &
 }
 
 main "$@"

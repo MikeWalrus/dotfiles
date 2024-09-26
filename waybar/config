@@ -87,13 +87,14 @@
         },
         "clock": {
             // "timezone": "America/New_York",
-            "timezones": ["Asia/Shanghai", "US/Central"],
+            "timezones": ["US/Central", "Asia/Shanghai"],
             "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
             "format": "{:%Z:%H:%M}",
             "format-alt": "{:%Y-%m-%d}",
             "actions": {
                 "on-scoll-up": "tz_up",
                 "on-scroll-down": "tz_down",
+                "on-click-right": "tz_up"
             }
         },
         "cpu": {

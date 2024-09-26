@@ -5,15 +5,15 @@ kernel_params=(
     loglevel=3
     i8042.dumbkbd
     nowatchdog
-    'initrd=\initramfs-linux-lts.img'
+    'initrd=\initramfs-linux.img'
 )
 # 'initrd=\intel-ucode.img' This is not needed anymore.
 # See https://archlinux.org/news/mkinitcpio-hook-migration-and-early-microcode/
 
-efibootmgr --create \
+echo efibootmgr --create \
     --disk /dev/nvme0n1 \
     --part 4 \
-    --label "Arch Linux linux-lts" \
-    --loader '\vmlinuz-linux-lts' \
+    --label "Arch Linux linux" \
+    --loader '\vmlinuz-linux' \
     --unicode \
     "${kernel_params[*]}"

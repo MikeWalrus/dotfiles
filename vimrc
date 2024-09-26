@@ -68,6 +68,7 @@ cmap w!! w !sudo tee > /dev/null %
 let g:loaded_ale_dont_use_this_in_other_plugins_please = 1
 let g:loaded_youcompleteme = 1
 let g:loaded_gitgutter = 1
+let g:ale_disable_lsp = 1
 
 " coc
 
@@ -216,7 +217,7 @@ let g:formatdef_istyle = '"iStyle"'
 
 let g:formatdef_verible = '"verible-verilog-format --column_limit=80 --indentation_spaces=4 -"'
 let g:formatters_systemverilog = ['verible']
-let g:formatters_verilog = ['verible']
+let g:formatters_verilog = ['istyle']
 
 ""
 " C
@@ -226,7 +227,8 @@ let g:ale_c_clangtidy_checks = ['*', '-altera*', '-llvmlibc*']
 ""
 "Python
 ""
-let g:formatters_python = ['black']
+let g:formatdef_black_custom = '"black --line-length 79 -q ".(&textwidth ? "-l".&textwidth : "")." -"'
+let g:formatters_python = ['black_custom']
 
 ""
 " PKGBUILD (pacman-contrib)
