@@ -18,7 +18,7 @@ main() {
         if [[ -z $filepath ]]; then
             filepath=$(xdg-user-dir VIDEOS)/$(date --iso-8601=seconds).mp4
         fi
-        pipeline=(vaapih264enc ! h264parse ! mp4mux ! filesink location="$filepath")
+        pipeline=(x264enc ! h264parse ! mp4mux ! filesink location="$filepath")
     fi
     set -x
     gst-launch-1.0 -e pipewiresrc path="$pw_node" ! videoconvert ! "${pipeline[@]}"

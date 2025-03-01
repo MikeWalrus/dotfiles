@@ -1,4 +1,5 @@
 4at-git
+7zip
 a2jmidid
 acpi
 acpi_call
@@ -37,6 +38,7 @@ bashtop
 bat
 bazel
 bc
+bcachefs-tools-git
 bcc
 bcc-tools
 beancount
@@ -54,6 +56,7 @@ bluez
 bluez-utils
 boomer-git
 boost
+bpf
 bpftrace
 bpytop
 brave-bin
@@ -64,6 +67,7 @@ bsd-games
 btdu
 btop
 btrfs-heatmap
+btrfs-progs
 bup
 cabal-install
 cadaver
@@ -163,6 +167,7 @@ ffmpegthumbnailer
 figlet
 filezilla
 find-cursor
+fio
 firefox
 firewalld
 flameshot
@@ -172,6 +177,7 @@ font-manager
 fontforge
 foomatic-db
 fossil
+fprintd
 freetuxtv
 fuseiso
 fzf
@@ -193,7 +199,6 @@ git
 git-filter-repo
 github-cli
 glm
-glmark2-git
 glow
 gnome-calendar
 gnome-clocks
@@ -240,12 +245,15 @@ hplip
 htop
 hugo
 hw-probe
+hyprgraphics-git
 hyprland-autoname-workspaces-git
 hyprland-my-git
 hyprland-my-git-debug
+hyprland-protocols-git
+hyprland-qtutils-git
 hyprland-scratchpad-git
-hyprpaper-my-git
-hyprpicker
+hyprpaper-git
+hyprpicker-git
 hyprprop-git
 hyprutils-git
 hyprwayland-scanner-git
@@ -276,12 +284,16 @@ j4-dmenu-desktop
 jack2
 jami-qt
 jdk-openjdk
+juliaup
+jupyter-notebook
+just
 jwasm
 kanshi
 kbi
 kcolorpicker-qt5
 kdenlive
 kernel-modules-hook
+kernelshark
 kitty
 kmscon
 kooha
@@ -295,11 +307,11 @@ ldc
 lf
 lib2geom
 lib32-gcc-libs
+libcamera-tools
 libeatmydata
 libffado
 libgccjit
 libgnome-keyring
-libguestfs
 libimobiledevice-git
 libimobiledevice-glue-git
 libisoburn
@@ -345,6 +357,7 @@ libwaftp-dev
 libxklavier
 lightly-git
 linux
+linux-bcachefs-my-git-headers
 linux-enable-ir-emitter-git
 linux-firmware
 linux-headers
@@ -372,10 +385,12 @@ mesa-utils
 minecraft-launcher
 mingw-w64-gcc
 minicom
+minidlna
 mipsel-elf-binutils
 mipsel-elf-gcc
 mlpolygen-git
 modelsim-intel-starter
+modprobed-db
 monero
 mono
 mono-msbuild
@@ -412,10 +427,16 @@ nss-mdns
 nsxiv
 ntfs-3g
 nvchecker
+nvidia
+nvidia-prime
+nvidia-utils
 nvm
 nvme-cli
-nwg-displays-my-git
+nvtop
+nwg-displays
+nwg-drawer
 nwg-look
+nwg-panel
 nyx
 obs-studio
 ocis
@@ -423,6 +444,7 @@ ocrmypdf
 oidc-agent
 okular
 onedrive-abraunegg
+opam
 openblas
 openbox
 openbsd-netcat
@@ -433,7 +455,7 @@ opentabletdriver-git
 orchis-theme
 os-prober
 osqp
-p7zip
+pa-dlna
 pacgraph
 pacman-contrib
 pacman-log-orphans-hook
@@ -472,6 +494,7 @@ pipewire
 pipewire-alsa
 pipewire-docs
 pipewire-pulse
+pipewire-zeroconf
 pkgconf
 pkgstats
 plasma-desktop
@@ -505,6 +528,7 @@ python-ipykernel
 python-isort
 python-lmdb
 python-matplotlib
+python-mplcursors
 python-myst-parser
 python-nox
 python-numpy
@@ -530,8 +554,6 @@ python-tikzplotlib-git
 python-types-requests
 python-word-beam-search-git
 python-xdg-base-dirs
-qemu-desktop
-qemu-emulators-full
 qsynth
 qt5ct
 qt6ct-my-git-debug
@@ -550,7 +572,6 @@ retroarch-assets-glui
 retroarch-assets-ozone
 retroarch-assets-xmb
 ripdrag-git
-ripgrep-all-git
 riscv32-elf-gdb
 rofi-lbonn-wayland-git
 rofi-themes-collection-git
@@ -584,9 +605,12 @@ sof-firmware
 solaar
 soundfont-fluid
 spdlog
+spectacle
 spike
 sqlitebrowser
+ssh-audit
 stalonetray
+steam
 stk
 strace
 stress-ng
@@ -643,6 +667,7 @@ tmux
 tokei
 tor
 torbrowser-launcher
+trace-cmd
 traceroute
 trayer
 tree
@@ -695,6 +720,7 @@ vim-copilot-git
 vim-fontsize
 vim-fzf-git
 vim-gitgutter
+vim-just-git
 vim-localvimrc-git
 vim-lumen-git
 vim-palenight-git
@@ -712,10 +738,12 @@ vim-zoom
 vinagre
 virt-manager
 visual-studio-code-bin
+vk-hdr-layer-kwin6-git
 vlc
 volctl
 vsftpd
 vulkan-intel
+vulkan-tools
 w3m
 wakapi-bin
 wakatime
@@ -817,7 +845,6 @@ xorg-xwud
 xournalpp-git
 xournalpp-libadwaita-mockup-git
 xpub
-xray
 xsel
 xsnow-comp-patch-git
 xss-lock
@@ -831,6 +858,7 @@ zathura
 zathura-djvu
 zathura-pdf-mupdf
 zerotier-one
+zfs-utils-git
 zip
 zoom
 zotero-bin

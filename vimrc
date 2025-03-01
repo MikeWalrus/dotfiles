@@ -70,7 +70,68 @@ let g:loaded_youcompleteme = 1
 let g:loaded_gitgutter = 1
 let g:ale_disable_lsp = 1
 
+
+
 " coc
+
+function! s:coc_static_highlight_fix() abort
+  hi CocSelectedText  ctermfg=Red     guifg=#fb4934 guibg=NONE
+  hi CocCodeLens      ctermfg=Gray    guifg=#999999 guibg=NONE
+  hi CocUnderline     term=underline cterm=underline gui=underline guisp=#ebdbb2
+  hi CocBold          term=bold cterm=bold gui=bold
+  hi CocItalic        term=italic cterm=italic gui=italic
+  hi CocStrikeThrough term=strikethrough cterm=strikethrough gui=strikethrough
+  hi CocMarkdownLink  ctermfg=Blue    guifg=#15aabf guibg=NONE
+  hi CocDisabled      guifg=#999999   ctermfg=gray
+  hi CocSearch        ctermfg=Blue    guifg=#15aabf guibg=NONE
+  hi CocLink          term=underline cterm=underline gui=underline guisp=#15aabf
+  hi link CocFloatActive         CocSearch
+  hi link CocFadeOut             Conceal
+  hi link CocMarkdownCode        markdownCode
+  hi link CocMarkdownHeader      markdownH1
+  hi link CocDeprecatedHighlight CocStrikeThrough
+  hi link CocUnusedHighlight     CocFadeOut
+  hi link CocListSearch          CocSearch
+  hi link CocListMode            ModeMsg
+  hi link CocListPath            Comment
+  hi link CocHighlightText       CursorColumn
+  hi link CocHoverRange          Search
+  hi link CocCursorRange         Search
+  hi link CocLinkedEditing       CocCursorRange
+  hi link CocHighlightRead       CocHighlightText
+  hi link CocHighlightWrite      CocHighlightText
+  " Notification
+  hi CocNotificationProgress  ctermfg=Blue    guifg=#15aabf guibg=NONE
+  hi link CocNotificationButton  CocUnderline
+  hi link CocNotificationError   CocErrorFloat
+  hi link CocNotificationWarning CocWarningFloat
+  hi link CocNotificationInfo    CocInfoFloat
+  " Snippet
+  hi link CocSnippetVisual       Visual
+  " Tree view highlights
+  hi link CocTreeTitle       Title
+  hi link CocTreeDescription Comment
+  hi link CocTreeOpenClose   CocBold
+  hi link CocTreeSelected    CursorLine
+  hi link CocSelectedRange   CocHighlightText
+  " Symbol highlights
+  hi link CocSymbolDefault       MoreMsg
+  "Pum
+  hi link CocPumSearch           CocSearch
+  hi link CocPumDetail           Comment
+  hi link CocPumMenu             CocFloating
+  hi link CocPumShortcut         Comment
+  hi link CocPumDeprecated       CocStrikeThrough
+  hi CocVirtualText             ctermfg=12 guifg=#504945
+  hi link CocPumVirtualText        CocVirtualText
+  hi link CocInputBoxVirtualText   CocVirtualText
+  hi link CocFloatDividingLine     CocVirtualText
+endfunction
+
+augroup MyColors
+    autocmd!
+    autocmd ColorScheme * call s:coc_static_highlight_fix()
+augroup END
 
 packadd coc.nvim
 
@@ -269,8 +330,8 @@ function LightTheme()
     colorscheme PaperColor
 endfunction
 
-au User LumenLight call LightTheme()
-au User LumenDark call DarkTheme()
+au User LumenLight nested call LightTheme()
+au User LumenDark nested call DarkTheme()
 
 if (has("nvim"))
 "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >

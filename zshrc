@@ -140,3 +140,4 @@ export XDG_STATE_HOME=$HOME/.local/state
 export GOPATH=$XDG_DATA_HOME/go
 export GOMODCACHE=$XDG_CACHE_HOME/go/mod
 
+export NINJA_STATUS="[%f/%t %w/%W] "

@@ -137,6 +137,7 @@
         },
         "network": {
             // "interface": "wlp2*", // (Optional) To force the use of this interface
+            "family": "ipv4",
             "format-wifi": "{essid} ({signalStrength}%) ",
             "format-ethernet": "{ipaddr}/{cidr} ",
             "tooltip-format": "{ifname} via {gwaddr} ",
@@ -195,7 +196,7 @@
         },
         "custom/aa": {
             "exec": "mako-dnd-waybar.sh",
-            //            "on-click": "mako-toggle",
+                        "on-click": "mako-toggle",
             "signal": 2
         },
         "custom/darkmode": {

@@ -179,7 +179,7 @@
          auto-dark-light-theme 'leuven)
   (auto-dark-mode 1))
 
-;; (after!
-;;   (let ((default-directory org-directory))
-;;     (setq rmh-elfeed-org-files (mapcar #'expand-file-name '("elfeed.org")))
-;;     ))
+(after!
+  (let ((default-directory org-directory))
+    (setq rmh-elfeed-org-files (mapcar #'expand-file-name '("elfeed.org")))
+    ))
