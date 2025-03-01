@@ -2,14 +2,31 @@
 
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
+;;
+(setq exec-path-from-shell-debug t)
 
-(setq doom-font (font-spec :family "Jetbrains Mono Medium" :size 22)
-      doom-variable-pitch-font (font-spec :family "DejaVu Serif" :size 22))
+(setq doom-font (font-spec :family "Jetbrains Mono Medium" :height 22)
+      doom-variable-pitch-font (font-spec :family "sans-serif" :height 1.0))
 
 (setq fcitx-remote-command "fcitx5-remote")
 
+(setq ispell-dictionary "en_US")
 
-(setq ispell-dictionary "en")
+(after! apheleia
+  (push '(
+          juliaformatter
+          "julia"
+          "--startup-file=no" "--history-file=no" "--project" "--quiet"
+          "-e"
+          "using JuliaFormatter; print(format_text(read(stdin, String), margin=80));"
+          )
+        apheleia-formatters)
+  (push '(julia-mode . juliaformatter
+          )
+        apheleia-mode-alist))
+
+
+
 
 (use-package! websocket
   :after org-roam)
@@ -27,6 +44,16 @@
         org-roam-ui-open-on-start t))
 
 (after! org
+  (setq my-org-latex-preview-scale 1.0)   ; depends on the font used in emacs or just on user preference
+  (defun org-latex-preview-advice (orig-func &rest args)
+    (let ((old-val (copy-tree org-format-latex-options)))     ; plist-put is maybe-destructive, weird. So, we have to restore old value ourselves
+      (setq org-format-latex-options (plist-put org-format-latex-options
+                                                :scale
+                                                (* my-org-latex-preview-scale (expt text-scale-mode-step text-scale-mode-amount))))
+      (apply orig-func args)
+      (setq org-format-latex-options old-val)))
+  (advice-add 'org-latex-preview :around #'org-latex-preview-advice)
+  (plist-put org-format-latex-options :scale 1.5)
   (setq org-ellipsis " ▼ "
         org-superstar-headline-bullets-list '("◉" "●" "○" "◆" "●" "○" "◆")
         org-superstar-item-bullet-alist '((?+ . ?➤) (?- . ?✦)) ; changes +/- symbols in item lists
@@ -58,11 +85,21 @@
   (add-to-list 'org-file-apps
                '("\\.pdf\\'" . "zathura \"%s\""))
   )
+(defun my-org-babel-execute:julia (body params)
+  (let ((in-file (org-babel-temp-file "n" ".jl")))
+    (with-temp-file in-file
+      (insert body))
+    (org-babel-eval
+     (format "julia %s"
+             (org-babel-process-file-name in-file))
+     "")))
 (after! org
   ;; active Babel languages
   (org-babel-do-load-languages
    'org-babel-load-languages
-   '((shell . t))))
+   '((shell . t)))
+  (advice-add 'org-babel-execute:julia :override #'my-org-babel-execute:julia)
+  )
 
 (after! ox-latex
   (setq org-latex-listings 'minted)
@@ -79,7 +116,7 @@
       TeX-show-compilation t
       TeX-command-extra-options "-shell-escape")
 
-(setq TeX-engine "xelatex")
+(setq TeX-engine 'xetex)
 
 (setq-default TeX-master nil) ; Query for master file.
 

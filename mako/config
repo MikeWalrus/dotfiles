@@ -12,6 +12,7 @@ layer=overlay
 default-timeout=10000
 icon-path=/usr/share/icons/Adwaita:/usr/share/icons/palenight
 border-radius=10
+on-touch=invoke-default-action
 
 [mode=dnd]
 invisible=1

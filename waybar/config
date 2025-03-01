@@ -7,7 +7,7 @@
                       // Choose the order of the modules
         "modules-left": ["hyprland/workspaces"],
         "modules-center": ["custom/media"],
-        "modules-right": ["systemd-failed-units", "custom/darkmode", "idle_inhibitor", "custom/aa", "pulseaudio", "network", "custom/netspeed", "custom/btrfs", "memory", "custom/cpu-psi", "temperature", "battery", "clock", "tray"],
+        "modules-right": ["systemd-failed-units", "custom/osk", "custom/rotation-lock", "custom/darkmode", "idle_inhibitor", "custom/aa", "pulseaudio", "network", "custom/netspeed", "custom/btrfs", "memory", "custom/cpu-psi", "temperature", "battery", "clock", "tray"],
         // Modules configuration
         // "sway/workspaces": {
         //     "disable-scroll": true,
@@ -195,7 +195,7 @@
         },
         "custom/aa": {
             "exec": "mako-dnd-waybar.sh",
-            //            "on-click": "mako-toggle",
+            "on-click": "mako-toggle",
             "signal": 2
         },
         "custom/darkmode": {
@@ -207,6 +207,16 @@
             "exec": "cpu-psi-waybar",
             "return-type": "json",
             "escape": false
+        },
+        "custom/rotation-lock": {
+            "exec": "rotation-lock-waybar.sh",
+            "on-click": "toggle-rotation-lock.sh",
+            "signal": 3
+        },
+        "custom/osk": {
+            "exec": "wvkbd-waybar.sh",
+            "on-click": "wvkbd-toggle.sh",
+            "signal": 4
         }
 }
 

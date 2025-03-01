@@ -226,7 +226,7 @@ label:focus {
 #idle_inhibitor {
 }
 
-#idle_inhibitor.activated {
+#idle_inhibitor.activated , #custom-osk.activated {
     background-color: #ecf0f1;
     color: #2d3436;
 }

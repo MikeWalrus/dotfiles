@@ -4,6 +4,8 @@ typeset -U path
 path=(
     ~/.local/bin
     ~/.ghcup/bin
+    ~/.juliaup/bin
+    ~/tmp
     /usr/bin/vendor_perl
     $path
 )

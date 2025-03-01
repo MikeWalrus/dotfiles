@@ -3,7 +3,6 @@ set cursorline
 syntax enable
 set expandtab
 set tabstop=4
-set smartindent
 set autoread
 inoremap jj <ESC>
 set nu
@@ -13,6 +12,7 @@ set showcmd
 set foldmethod=syntax
 set signcolumn=yes
 set nohlsearch
+filetype plugin indent on
 
 set sw=4
 set ts=4
@@ -74,6 +74,61 @@ let g:ale_disable_lsp = 1
 
 packadd coc.nvim
 
+function! s:fix_coc_highlight() abort
+  hi default CocSelectedText  ctermfg=Red     guifg=#fb4934 guibg=NONE
+  hi default CocCodeLens      ctermfg=Gray    guifg=#999999 guibg=NONE
+  hi default CocUnderline     term=underline cterm=underline gui=underline guisp=#ebdbb2
+  hi default CocBold          term=bold cterm=bold gui=bold
+  hi default CocItalic        term=italic cterm=italic gui=italic
+  hi default CocStrikeThrough term=strikethrough cterm=strikethrough gui=strikethrough
+  hi default CocMarkdownLink  ctermfg=Blue    guifg=#15aabf guibg=NONE
+  hi default CocDisabled      guifg=#999999   ctermfg=gray
+  hi default CocSearch        ctermfg=Blue    guifg=#15aabf guibg=NONE
+  hi default CocLink          term=underline cterm=underline gui=underline guisp=#15aabf
+  hi default link CocFloatActive         CocSearch
+  hi default link CocFadeOut             Conceal
+  hi default link CocMarkdownCode        markdownCode
+  hi default link CocMarkdownHeader      markdownH1
+  hi default link CocDeprecatedHighlight CocStrikeThrough
+  hi default link CocUnusedHighlight     CocFadeOut
+  hi default link CocListSearch          CocSearch
+  hi default link CocListMode            ModeMsg
+  hi default link CocListPath            Comment
+  hi default link CocHighlightText       CursorColumn
+  hi default link CocHoverRange          Search
+  hi default link CocCursorRange         Search
+  hi default link CocLinkedEditing       CocCursorRange
+  hi default link CocHighlightRead       CocHighlightText
+  hi default link CocHighlightWrite      CocHighlightText
+  " Notification
+  hi default CocNotificationProgress  ctermfg=Blue    guifg=#15aabf guibg=NONE
+  hi default link CocNotificationButton  CocUnderline
+  hi default link CocNotificationError   CocErrorFloat
+  hi default link CocNotificationWarning CocWarningFloat
+  hi default link CocNotificationInfo    CocInfoFloat
+  " Snippet
+  hi default link CocSnippetVisual       Visual
+  " Tree view highlights
+  hi default link CocTreeTitle       Title
+  hi default link CocTreeDescription Comment
+  hi default link CocTreeOpenClose   CocBold
+  hi default link CocTreeSelected    CursorLine
+  hi default link CocSelectedRange   CocHighlightText
+  " Symbol highlights
+  hi default link CocSymbolDefault       MoreMsg
+  "Pum
+  hi default link CocPumSearch           CocSearch
+  hi default link CocPumDetail           Comment
+  hi default link CocPumMenu             CocFloating
+  hi default link CocPumShortcut         Comment
+  hi default link CocPumDeprecated       CocStrikeThrough
+  hi default CocVirtualText             ctermfg=12 guifg=#504945
+  hi default link CocPumVirtualText        CocVirtualText
+  hi default link CocInputBoxVirtualText   CocVirtualText
+  hi default link CocFloatDividingLine     CocVirtualText
+endfunction
+
+autocmd ColorScheme * call s:fix_coc_highlight()
 
 function! CheckBackspace() abort
   let col = col('.') - 1
@@ -269,8 +324,8 @@ function LightTheme()
     colorscheme PaperColor
 endfunction
 
-au User LumenLight call LightTheme()
-au User LumenDark call DarkTheme()
+au User LumenLight nested call LightTheme()
+au User LumenDark nested call DarkTheme()
 
 if (has("nvim"))
 "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
