@@ -69,3 +69,6 @@
 
 (package! beancount-mode
   :recipe (:host github :repo "beancount/beancount-mode"))
+
+(package! transpose-frame)
+(package! mixed-pitch)
