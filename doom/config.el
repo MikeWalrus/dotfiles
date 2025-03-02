@@ -43,17 +43,40 @@
         org-roam-ui-update-on-save t
         org-roam-ui-open-on-start t))
 
+(setq major-mode-remap-alist major-mode-remap-defaults)
+
 (after! org
   (setq my-org-latex-preview-scale 1.0)   ; depends on the font used in emacs or just on user preference
-  (defun org-latex-preview-advice (orig-func &rest args)
-    (let ((old-val (copy-tree org-format-latex-options)))     ; plist-put is maybe-destructive, weird. So, we have to restore old value ourselves
-      (setq org-format-latex-options (plist-put org-format-latex-options
-                                                :scale
-                                                (* my-org-latex-preview-scale (expt text-scale-mode-step text-scale-mode-amount))))
-      (apply orig-func args)
-      (setq org-format-latex-options old-val)))
-  (advice-add 'org-latex-preview :around #'org-latex-preview-advice)
-  (plist-put org-format-latex-options :scale 1.5)
+  ;;   (setq org-preview-latex-default-process 'dvisvgm)
+
+  ;;   ;; https://karthinks.com/software/scaling-latex-previews-in-emacs/
+  ;;   (defun my/text-scale-adjust-latex-previews ()
+  ;;     "Adjust the size of latex preview fragments when changing the buffer's text scale."
+  ;;     (pcase major-mode
+  ;;       ('latex-mode
+  ;;        (dolist (ov (overlays-in (point-min) (point-max)))
+  ;;          (if (eq (overlay-get ov 'category)
+  ;;                  'preview-overlay)
+  ;;              (my/text-scale--resize-fragment ov))))
+  ;;       ('org-mode
+  ;;        (dolist (ov (overlays-in (point-min) (point-max)))
+  ;;          (if (eq (overlay-get ov 'org-overlay-type)
+  ;;                  'org-latex-overlay)
+  ;;              (my/text-scale--resize-fragment ov))))))
+
+  ;;   (defun my/text-scale--resize-fragment (ov)
+  ;;     (overlay-put
+  ;;      ov 'display
+  ;;      (cons 'image
+  ;;            (plist-put
+  ;;             (cdr (overlay-get ov 'display))
+  ;;             :scale (+ 1.0 (* 0.25 text-scale-mode-amount))))))
+
+  ;;   (add-hook 'text-scale-mode-hook #'my/text-scale-adjust-latex-previews)
+  ;; (setq my/org-latex-scale 1.75)
+  ;; (setq org-format-latex-options (plist-put org-format-latex-options :scale my/org-latex-scale))
+
+
   (setq org-ellipsis " ▼ "
         org-superstar-headline-bullets-list '("◉" "●" "○" "◆" "●" "○" "◆")
         org-superstar-item-bullet-alist '((?+ . ?➤) (?- . ?✦)) ; changes +/- symbols in item lists
@@ -209,12 +232,10 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-;; auto-dark
-(after! doom-themes
-  ;; set  your favorite themes
-  (setq! auto-dark-dark-theme 'doom-palenight
-         auto-dark-light-theme 'leuven)
-  (auto-dark-mode 1))
+
+(use-package auto-dark
+  :hook (after-init . auto-dark-mode)
+  :custom (auto-dark-themes '((doom-palenight) (leuven))))
 
 ;; (after!
 ;;   (let ((default-directory org-directory))
