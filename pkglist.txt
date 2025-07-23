@@ -7,7 +7,7 @@ acpid
 adobe-source-han-sans-cn-fonts
 adobe-source-han-sans-kr-fonts
 adobe-source-han-serif-cn-fonts
-adw-gtk3
+adw-gtk-theme
 alacritty
 alsa-plugins
 alsa-utils
@@ -23,6 +23,7 @@ aria2
 asar
 ascii-image-converter
 asciidoc
+asciidoctor
 asciinema
 asp
 aspell
@@ -76,6 +77,7 @@ cargo-flamegraph
 catch2
 ccache
 cellwriter
+cereal
 chatbot-ui-git
 chatbot-ui-legacy-git
 check
@@ -84,12 +86,14 @@ checkbashisms
 cheese
 chromium
 ckermit
+clang18
 clash-dashboard-git
 clash-premium-bin
 clinfo
 cloc
 cloud-utils
 cloudflare-warp-bin
+clusterssh
 cmatrix
 colorpicker
 compsize
@@ -188,14 +192,13 @@ gcc-ada
 gdb
 gedit
 genact
-gf-debugger-git
 ghc
 ghcup-hs-bin
 gickup
 gifsicle
-gimp-devel
 girara
 git
+git-delta
 git-filter-repo
 github-cli
 glm
@@ -217,9 +220,7 @@ golly
 gparted
 gpodder
 grim
-grimblast-git
 grocy
-gromit-mpx
 grpcurl
 grub
 gst-plugin-pipewire
@@ -229,7 +230,7 @@ gtk4-demos
 gtk4-docs
 gtk4-layer-shell
 gtkmm-4.0
-gtkwave-gtk3
+gtkwave
 gucharmap
 gvfs-dnssd
 gvfs-smb
@@ -245,18 +246,11 @@ hplip
 htop
 hugo
 hw-probe
-hyprgraphics-git
-hyprland-autoname-workspaces-git
-hyprland-my-git
+hyprland
 hyprland-my-git-debug
-hyprland-protocols-git
-hyprland-qtutils-git
-hyprland-scratchpad-git
-hyprpaper-git
-hyprpicker-git
+hyprpaper
+hyprpicker
 hyprprop-git
-hyprutils-git
-hyprwayland-scanner-git
 i3-wm
 i3blocks
 i3lock-color
@@ -287,7 +281,6 @@ jdk-openjdk
 juliaup
 jupyter-notebook
 just
-jwasm
 kanshi
 kbi
 kcolorpicker-qt5
@@ -295,13 +288,11 @@ kdenlive
 kernel-modules-hook
 kernelshark
 kitty
-kmscon
 kooha
 koreader-bin
 krop
 kscreen
 kubo
-kylin-virtual-keyboard-git
 languagetool
 ldc
 lf
@@ -366,6 +357,7 @@ linux-lts-headers
 linuxqq-nt-bwrap
 lld
 lldb
+llvm18
 localsend-bin
 logisim
 logisim-evolution
@@ -379,6 +371,7 @@ mariadb
 mariadb-jdbc
 mathjax
 maven
+mediainfo
 meld
 mesa-demos
 mesa-utils
@@ -389,7 +382,6 @@ minidlna
 mipsel-elf-binutils
 mipsel-elf-gcc
 mlpolygen-git
-modelsim-intel-starter
 modprobed-db
 monero
 mono
@@ -443,7 +435,6 @@ ocis
 ocrmypdf
 oidc-agent
 okular
-onedrive-abraunegg
 opam
 openblas
 openbox
@@ -451,11 +442,11 @@ openbsd-netcat
 openconnect
 openprinting-ppds-postscript-ricoh-my
 openssh
+openssl-1.1
 opentabletdriver-git
 orchis-theme
 os-prober
 osqp
-pa-dlna
 pacgraph
 pacman-contrib
 pacman-log-orphans-hook
@@ -504,6 +495,7 @@ playerctl
 plocate
 plots
 pnpm
+podman
 polkit-gnome
 polyphone
 powertop
@@ -597,7 +589,6 @@ shfmt
 simh
 sing-box
 sioyek-appimage
-skippy-xd-git
 slack-electron
 slop
 smartmontools
@@ -665,6 +656,7 @@ tla-tools
 tlp
 tmux
 tokei
+toml11
 tor
 torbrowser-launcher
 trace-cmd
@@ -737,7 +729,9 @@ vim-youcompleteme-git
 vim-zoom
 vinagre
 virt-manager
+virtme-ng
 visual-studio-code-bin
+visual-studio-code-insiders-bin
 vk-hdr-layer-kwin6-git
 vlc
 volctl
@@ -779,7 +773,7 @@ wrangler
 wshowkeys-git
 xclip
 xdg-desktop-portal-gtk
-xdg-desktop-portal-hyprland-git
+xdg-desktop-portal-hyprland
 xdg-ninja
 xdg-user-dirs
 xdg-utils
@@ -788,6 +782,7 @@ xdpss-git
 xf86-input-wacom
 xf86-video-intel
 xf86-video-vesa
+xfsprogs
 xilinx-vivado-dummy
 xinput-gui
 xmobar
@@ -858,7 +853,6 @@ zathura
 zathura-djvu
 zathura-pdf-mupdf
 zerotier-one
-zfs-utils-git
 zip
 zoom
 zotero-bin

@@ -87,7 +87,7 @@
         },
         "clock": {
             // "timezone": "America/New_York",
-            "timezones": ["US/Central", "Asia/Shanghai"],
+            "timezones": ["Asia/Shanghai", "US/Central"],
             "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
             "format": "{:%Z:%H:%M}",
             "format-alt": "{:%Y-%m-%d}",

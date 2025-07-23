@@ -44,12 +44,12 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -v '^?' backward-delete-char
 
 # Proxys
-# export all_proxy=http://127.0.0.1:7890
-# export ALL_PROXY=http://127.0.0.1:7890
-# export http_proxy=http://127.0.0.1:7890
-# export https_proxy=http://127.0.0.1:7890
-# export HTTP_PROXY=http://127.0.0.1:7890
-# export HTTPS_PROXY=http://127.0.0.1:7890
+export all_proxy=http://127.0.0.1:7890
+export ALL_PROXY=http://127.0.0.1:7890
+export http_proxy=http://127.0.0.1:7890
+export https_proxy=http://127.0.0.1:7890
+export HTTP_PROXY=http://127.0.0.1:7890
+export HTTPS_PROXY=http://127.0.0.1:7890
 
 if [ "$TERM" = "linux" ]; then
     /bin/echo -e "
@@ -141,3 +141,5 @@ export GOPATH=$XDG_DATA_HOME/go
 export GOMODCACHE=$XDG_CACHE_HOME/go/mod
 
 export NINJA_STATUS="[%f/%t %w/%W] "
+
+export GRB_LICENSE_FILE=~/.config/gurobi/gurobi.lic
