@@ -14,13 +14,13 @@ btdu
 cellwriter
 clash-dashboard-git
 clash-premium-bin
-cloudflare-warp-bin
 colorpicker
 cpulimit
 davfs2
 ddcci-driver-linux-dkms
 debtap
 docx-you-want
+dotbot-git
 drawio-desktop-bin
 eepers-git
 elan-lean
@@ -35,11 +35,13 @@ freetuxtv
 ghcup-hs-bin
 gickup
 goldendict-webengine-pr-git
+grimblast-git
 grocy
 hdrmerge
 howdy-beta-git
 hw-probe
 hyprevents-git
+hyprland-autoname-workspaces-git
 hyprland-my-git-debug
 hyprprop-git
 i3lock-color
@@ -59,16 +61,12 @@ libtatsu-git
 libusbmuxd-git
 libwm-git
 lightly-git
-linux-enable-ir-emitter-git
 linuxqq-nt-bwrap
 localsend-bin
 logisim
 logisim-evolution
-mako-git
 mariadb-jdbc
 minecraft-launcher
-mipsel-elf-binutils
-mipsel-elf-gcc
 mlpolygen-git
 modprobed-db
 mtm-git
@@ -94,6 +92,7 @@ perl-latexml
 perl-log-dispatch
 perl-time-out
 plots
+portable
 pspp
 python-dlib-git
 python-editdistance
@@ -112,6 +111,7 @@ ripdrag-git
 rofi-lbonn-wayland-git
 rofi-themes-collection-git
 rr
+runapp
 rust-racer
 rustc-demangle
 sc-im
@@ -122,7 +122,6 @@ snapd-xdg-open-git
 spread-sheet-widget
 surf
 sway-audio-idle-inhibit-git
-swayidle-git
 swaylock-git
 sxmo-dmenu
 syllazh
@@ -174,6 +173,8 @@ wakapi-bin
 waybar-git
 waybar-git-debug
 wayland-debug-cli-git
+wechat
+wechat-bin
 wemeet-bin
 weylus
 wf-osk-git
@@ -185,7 +186,6 @@ wshowkeys-git
 xdg-ninja
 xdpss-git
 xinput-gui
-xournalpp-git
 xournalpp-libadwaita-mockup-git
 xpub
 xray-domain-list-community

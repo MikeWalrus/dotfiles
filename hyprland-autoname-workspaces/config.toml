@@ -1,27 +1,27 @@
-version = "1.1.14"
+version = "1.1.16"
 
 [class]
-"(?i)waydroid.*" = "droid"
-"(?i)Kitty" = "term"
-"org.pwmt.zathura" = ""
-Gvim = "🇻"
 Alacritty = ""
-Brave-browser = "🌍"
-"org.gnome.Contacts" = ""
-TelegramDesktop = "✈️"
-libreoffice-writer = ""
-emacs = "😈"
-"[Ff]irefox" = ""
-"org.gnome.Nautilus" = ""
-QQ = ""
-DEFAULT = "{class}"
-Sxiv = "🖼️"
 thunderbird = ""
+"[Ff]irefox" = ""
+"org.pwmt.zathura" = ""
+DEFAULT = "{class}"
 "org.telegram.desktop" = ""
+Sxiv = "🖼️"
+emacs = "😈"
+Anki = "📇"
+"org.gnome.Nautilus" = ""
+TelegramDesktop = "✈️"
+Gvim = "🇻"
+"org.gnome.Contacts" = ""
+"(?i)waydroid.*" = "droid"
 Zotero = "Z"
+"(?i)Kitty" = "term"
 "com.github.xournalpp.xournalpp" = ""
 GoldenDict = "📙"
-Anki = "📇"
+Brave-browser = "🌍"
+libreoffice-writer = ""
+QQ = ""
 
 [class_active]
 
@@ -30,23 +30,23 @@ Anki = "📇"
 [initial_class_active]
 
 [workspaces_name]
+3 = "three"
 0 = "zero"
+4 = "four"
+5 = "five"
+7 = "seven"
+8 = "eight"
+1 = "one"
+6 = "six"
 10 = "ten"
 9 = "nine"
-8 = "eight"
-4 = "four"
-6 = "six"
-7 = "seven"
-3 = "three"
-1 = "one"
-5 = "five"
 2 = "two"
-
-[title_in_class.firefox]
-".*Apple Music.*" = ""
 
 [title_in_class."(?i)kitty"]
 "(?i)neomutt" = "neomutt"
+
+[title_in_class.firefox]
+".*Apple Music.*" = ""
 
 [title_in_class_active."(?i)firefox"]
 "(?i)twitch" = "<span color='purple'>{icon}</span>"
@@ -64,12 +64,12 @@ Anki = "📇"
 [initial_title_in_initial_class_active]
 
 [exclude]
-"(?i)fcitx" = ".*"
-"ueberzugpp*" = ""
-"[Ss]team" = "^(Friends List.*)?$"
-"" = "^$"
 "(?i)TestApp" = ""
+"[Ss]team" = "^(Friends List.*)?$"
+"ueberzugpp*" = ""
 aProgram = "^$"
+"(?i)fcitx" = ".*"
+"" = "^$"
 
 [format]
 dedup = true

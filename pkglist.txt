@@ -33,6 +33,7 @@ audacity
 autoconf
 automake
 autopep8
+b3sum
 base
 base-devel
 bashtop
@@ -52,6 +53,8 @@ binutils
 birdtray
 bison
 bitwarden
+bluedevil
+blueman
 blueprint-compiler
 bluez
 bluez-utils
@@ -92,7 +95,6 @@ clash-premium-bin
 clinfo
 cloc
 cloud-utils
-cloudflare-warp-bin
 clusterssh
 cmatrix
 colorpicker
@@ -120,6 +122,7 @@ debian-archive-keyring
 debootstrap
 debtap
 devtools
+dex
 diffoscope
 dino
 discord
@@ -183,6 +186,7 @@ foomatic-db
 fossil
 fprintd
 freetuxtv
+freetype2-demos
 fuseiso
 fzf
 gajim
@@ -220,6 +224,7 @@ golly
 gparted
 gpodder
 grim
+grimblast-git
 grocy
 grpcurl
 grub
@@ -247,6 +252,7 @@ htop
 hugo
 hw-probe
 hyprland
+hyprland-autoname-workspaces-git
 hyprland-my-git-debug
 hyprpaper
 hyprpicker
@@ -365,7 +371,7 @@ lrzsz
 lxappearance-gtk3
 m4
 make
-mako-git
+mako
 man-pages
 mariadb
 mariadb-jdbc
@@ -379,8 +385,6 @@ minecraft-launcher
 mingw-w64-gcc
 minicom
 minidlna
-mipsel-elf-binutils
-mipsel-elf-gcc
 mlpolygen-git
 modprobed-db
 monero
@@ -447,6 +451,7 @@ opentabletdriver-git
 orchis-theme
 os-prober
 osqp
+otf-font-awesome
 pacgraph
 pacman-contrib
 pacman-log-orphans-hook
@@ -568,6 +573,7 @@ riscv32-elf-gdb
 rofi-lbonn-wayland-git
 rofi-themes-collection-git
 rr
+runapp
 rust-racer
 rustup
 s-tui
@@ -611,7 +617,7 @@ surf
 svgo
 sway-audio-idle-inhibit-git
 swaybg
-swayidle-git
+swayidle
 swaylock-git
 swaywsr-git
 sxiv
@@ -665,7 +671,6 @@ trayer
 tree
 ttf-bookerly
 ttf-dejavu
-ttf-font-awesome
 ttf-jetbrains-mono
 ttf-ms-win11-auto
 ttf-ms-win11-auto-zh_cn
@@ -686,6 +691,7 @@ unoconv
 unrar
 unzip
 urlwatch
+uwsm
 uxplay
 v4l2loopback-dkms
 vala
@@ -745,6 +751,7 @@ waybar-git
 waybar-git-debug
 wayland-debug-cli-git
 wayvnc
+wechat
 weechat
 wemeet-bin
 wev
@@ -853,6 +860,7 @@ zathura
 zathura-djvu
 zathura-pdf-mupdf
 zerotier-one
+zfs-utils-git
 zip
 zoom
 zotero-bin

@@ -82,6 +82,8 @@ class Lock:
             logger.error("ready_fd got an empty string")
         ready_file.close()
         logger.info("The lock process is ready.")
+        #logger.info("sleep to avoid race")
+        #time.sleep(1)
         self.release_inhibitor()
 
     def sway_idle_workaround(self):

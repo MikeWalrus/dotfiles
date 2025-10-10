@@ -5,8 +5,8 @@ kernel_params=(
     loglevel=3
     i8042.dumbkbd
     nowatchdog
-    nokaslr
-    'initrd=\initramfs-linux-bcachefs-my-git.img'
+# nokaslr
+    'initrd=\initramfs-linux-lts.img'
 )
 # 'initrd=\intel-ucode.img' This is not needed anymore.
 # See https://archlinux.org/news/mkinitcpio-hook-migration-and-early-microcode/
@@ -15,6 +15,6 @@ efibootmgr --create \
     --disk /dev/nvme0n1 \
     --part 4 \
     --label "Arch Linux linux" \
-    --loader '\vmlinuz-linux-bcachefs-my-git' \
+    --loader '\vmlinuz-linux-lts' \
     --unicode \
     "${kernel_params[*]}"

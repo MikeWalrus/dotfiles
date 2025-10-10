@@ -1,0 +1,24 @@
+#+title: My dotfiles
+
+#+BEGIN_QUOTE
+Who needs nix and home-manager?
+#+end_quote
+
+These files are meant to be installed as symlinks by [[https://github.com/anishathalye/dotbot][Dotbot]].
+In case I forget, the configuration file is [[file:install.conf.yaml]].
+There's also a Makefile that compiles stuff.
+
+Note that the configurations for the laptop/desktop and the detachable are
+maintained in different branches. I should figure out how to merge them somehow.
+
+* Arch Linux
+[[file:localpkglist.txt]] and [[file:pkglist.txt]] are supposed to be lists of packages that are out of and in the Arch Linux repos respectively.
+
+I use a pre-commit hook to generate them.
+#+begin_src bash
+#!/usr/bin/env bash
+set -eo pipefail
+pacman -Qqe > pkglist.txt
+pacman -Sl aur | awk '/installed.$/{print $2;}' > localpkglist.txt
+git add pkglist.txt localpkglist.txt
+#+end_src
