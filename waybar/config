@@ -102,7 +102,7 @@
             "tooltip": false
         },
         "memory": {
-            "format": " {avail}G"
+            "format": " {avail}G  {swapAvail}G"
         },
         "temperature": {
             // "thermal-zone": 6,

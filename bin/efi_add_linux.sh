@@ -5,7 +5,7 @@ kernel_params=(
     loglevel=3
     i8042.dumbkbd
     nowatchdog
-    'initrd=\initramfs-linux-mainline-uring-mock.img'
+    'initrd=\initramfs-linux.img'
 )
 # 'initrd=\intel-ucode.img' This is not needed anymore.
 # See https://archlinux.org/news/mkinitcpio-hook-migration-and-early-microcode/
@@ -13,7 +13,7 @@ kernel_params=(
 efibootmgr --create \
     --disk /dev/nvme0n1 \
     --part 1 \
-    --label "Arch Linux linux-mainline-uring-mock" \
-    --loader '\vmlinuz-linux-mainline-uring-mock' \
+    --label "Arch Linux linux" \
+    --loader '\vmlinuz-linux' \
     --unicode \
     "${kernel_params[*]}"
