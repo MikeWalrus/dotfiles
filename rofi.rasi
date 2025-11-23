@@ -157,4 +157,6 @@ configuration {
 
 window {
     width: 1000;
+    location: center;
+    anchor: center;
 }

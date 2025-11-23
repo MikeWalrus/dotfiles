@@ -16,7 +16,6 @@ clash-dashboard-git
 clash-premium-bin
 colorpicker
 cpulimit
-davfs2
 ddcci-driver-linux-dkms
 debtap
 docx-you-want
@@ -42,7 +41,6 @@ howdy-beta-git
 hw-probe
 hyprevents-git
 hyprland-autoname-workspaces-git
-hyprland-my-git-debug
 hyprprop-git
 i3lock-color
 i3wsr
@@ -108,7 +106,6 @@ python-word-beam-search-git
 qt6ct-xdg-colorscheme-git
 rars
 ripdrag-git
-rofi-lbonn-wayland-git
 rofi-themes-collection-git
 rr
 runapp

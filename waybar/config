@@ -87,7 +87,7 @@
         },
         "clock": {
             // "timezone": "America/New_York",
-            "timezones": ["Asia/Shanghai", "US/Central"],
+            "timezones": ["US/Central", "Asia/Shanghai"],
             "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
             "format": "{:%Z:%H:%M}",
             "format-alt": "{:%Y-%m-%d}",
@@ -102,7 +102,7 @@
             "tooltip": false
         },
         "memory": {
-            "format": " {avail}G"
+            "format": " {avail}G  {swapAvail}G"
         },
         "temperature": {
             // "thermal-zone": 6,

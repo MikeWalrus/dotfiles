@@ -42,7 +42,7 @@ bazel
 bc
 bcachefs-tools-git
 bcc
-bcc-tools
+bcc-libbpf-tools
 beancount
 bear
 bemenu
@@ -101,7 +101,6 @@ colorpicker
 compsize
 conntrack-tools
 convmv
-coqide
 corkscrew
 corrosion
 cowsay
@@ -253,7 +252,6 @@ hugo
 hw-probe
 hyprland
 hyprland-autoname-workspaces-git
-hyprland-my-git-debug
 hyprpaper
 hyprpicker
 hyprprop-git
@@ -368,7 +366,7 @@ localsend-bin
 logisim
 logisim-evolution
 lrzsz
-lxappearance-gtk3
+lxappearance
 m4
 make
 mako
@@ -387,6 +385,7 @@ minicom
 minidlna
 mlpolygen-git
 modprobed-db
+mold
 monero
 mono
 mono-msbuild
@@ -423,7 +422,7 @@ nss-mdns
 nsxiv
 ntfs-3g
 nvchecker
-nvidia
+nvidia-open
 nvidia-prime
 nvidia-utils
 nvm
@@ -570,7 +569,8 @@ retroarch-assets-ozone
 retroarch-assets-xmb
 ripdrag-git
 riscv32-elf-gdb
-rofi-lbonn-wayland-git
+rocqide
+rofi
 rofi-themes-collection-git
 rr
 runapp
@@ -696,7 +696,6 @@ uxplay
 v4l2loopback-dkms
 vala
 valgrind
-vbam-wx
 vdpauinfo
 ventoy-bin
 verilator
