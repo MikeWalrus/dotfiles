@@ -59,10 +59,12 @@ def on_changed(orientation: str):
     has_input_transform = False
     def modify_line(line: str) -> str:
         if line.startswith("monitor"):
+            if "Sharp Corporation 0x1526" not in line:
+                return line
             args = line.split(",")
             if args[-2].strip() == "transform":
                 args[-1] = hyprland_transform[orientation]
-            elif "Sharp Corporation 0x1526" in line:
+            else:
                 args += ["transform", hyprland_transform[orientation]]
             return ",".join(args)
         return line

@@ -1,3 +1,9 @@
+if [[ $TERM == "dumb" ]]; then
+    unsetopt zle
+    PS1='$ '
+    return
+fi
+
 export GPG_TTY=$(tty)
 
 typeset -U path
@@ -5,6 +11,7 @@ path=(
     ~/.local/bin
     ~/.ghcup/bin
     ~/.juliaup/bin
+    ~/.cargo/bin
     ~/tmp
     /usr/bin/vendor_perl
     $path
@@ -18,6 +25,7 @@ setopt INC_APPEND_HISTORY
 setopt autopushd
 
 setopt HIST_VERIFY
+
 
 autoload -U colors && colors
 PS1="%B"\
@@ -46,12 +54,13 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -v '^?' backward-delete-char
 
 # Proxys
-# export all_proxy=http://127.0.0.1:7890
-# export ALL_PROXY=http://127.0.0.1:7890
-# export http_proxy=http://127.0.0.1:7890
-# export https_proxy=http://127.0.0.1:7890
-# export HTTP_PROXY=http://127.0.0.1:7890
-# export HTTPS_PROXY=http://127.0.0.1:7890
+# proxy="127.0.0.1:7890"
+# export all_proxy=http://$proxy
+# export ALL_PROXY=http://$proxy
+# export http_proxy=http://$proxy
+# export https_proxy=http://$proxy
+# export HTTP_PROXY=http://$proxy
+# export HTTPS_PROXY=http://$proxy
 
 if [ "$TERM" = "linux" ]; then
     /bin/echo -e "
@@ -142,3 +151,4 @@ export XDG_STATE_HOME=$HOME/.local/state
 export GOPATH=$XDG_DATA_HOME/go
 export GOMODCACHE=$XDG_CACHE_HOME/go/mod
 
+export GRB_LICENSE_FILE=~/.config/gurobi/gurobi.lic
